@@ -23,7 +23,9 @@ function Footer() {
                 <footer class="main-footer">
                 <p class="copyright">
                     © 2022 Copyright Technical Union <br />&nbsp;&nbsp; | Developed by
-                    Edgar Lindo & <b>ZichKoding</b> |
+                    Edgar Lindo & <b><a href='https://zichkoding.github.io' target="_blank">
+                                ZichKoding
+                            </a></b> |
                 </p>
                 </footer>
             </div>
