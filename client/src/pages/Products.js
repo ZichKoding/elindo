@@ -9,7 +9,7 @@ function Products() {
 
                         <h6 class="piston-pump"> Variable Displacement piston pumps</h6> <br/> 
                         <img src={require("../assets/images/rexrothpump-1.png")} class= "rexrothpump" alt="piston-pump" /> <br/>
-                        <a href="pdf files\a10v-pump-catalog.pdf" class="btn btn-info">Download PDF</a> <br/> <br/>
+                        <a href={require("../assets/pdf files/a10v-pump-catalog.pdf")} class="btn btn-info">Download PDF</a> <br/> <br/>
 
                         <table class= "table table-hover table-striped table-bordered">
                             
@@ -73,7 +73,7 @@ function Products() {
 
                         <h6 class="fixed-piston-pump"> Fixed Displacement Radial Piston Pumps</h6> <br/> 
                         <img src={require("../assets/images/radial-piston-pump.png")} class= "fixed-piston-pump-pic" alt="fixed-piston-pump" /> <br/>
-                        <a href="/pdf files/radial-piston-pumps.pdf" class="btn btn-info">Download PDF</a> <br/> <br/>
+                        <a href={require("../assets/pdf files/radial-piston-pumps.pdf")} class="btn btn-info">Download PDF</a> <br/> <br/>
 
                         <table class= "table table-hover table-striped table-bordered">
                             <tr>
@@ -256,14 +256,14 @@ function Products() {
                             </h5>
                 
                             <form 
-                            action ="https://formsubmit.co/info@tu.biz"
+                                action ="https://formsubmit.co/info@tu.biz"
                                 method="post"
                                 enctype="multipart/form-data"
                             >
                                 <input
-                                type="hidden"
-                                name="_next"
-                                value="http://www.tu.biz/thankyou.html"
+                                    type="hidden"
+                                    name="_next"
+                                    value="http://www.tu.biz/thankyou.html"    // REMEMBER THIS VALUE MIGHT NEED TO CHANGE 
                                 />
                                 <h5> 
                                     * Select one checkbox
