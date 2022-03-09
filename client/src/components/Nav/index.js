@@ -21,7 +21,6 @@ function Nav() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav">
               <li className="nav-item">
-                {/* <a className="nav-link active" href="index.html">| Home</a> */}
                 <Link to="/" className="nav-link active">| Home</Link>
               </li>
               <li className="nav-item">

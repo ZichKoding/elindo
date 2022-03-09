@@ -11,6 +11,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 import Homepage from './pages/Homepage';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Homepage />} />
+          <Route path="/Products" element={<Products />} />
           
         </Routes>
 
