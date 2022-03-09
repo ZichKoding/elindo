@@ -1,11 +1,10 @@
 import React from "react";
 
 function Homepage() {
-
     return (
-        <div class="row">
-            <div class="col-md-6">
-                <p class="maintext">
+        <div className="row">
+            <div className="col-md-6">
+                <p className="maintext">
                 <strong> TU – TECHNICAL UNION</strong> is your single source for
                 engineered and standard hydraulic components to meet your hydraulic
                 machine’s technical requirements. Whenever you are working on a new
@@ -14,13 +13,13 @@ function Homepage() {
                 production time, and optimal machine maintenance to maximize your
                 company’s capital investment.
                 </p>
-                <p class="maintext">
+                <p className="maintext">
                 <strong>TU – TECHNICAL UNION</strong> offers cost-effective technical
                 solutions that you can trust to help you increase efficient
                 productivity, compact system design, and usage control of spare
                 components for your hydraulic machinery.
                 </p>
-                <h4 class="listtittle"><strong>Our Advantages</strong></h4>
+                <h4 className="listtittle"><strong>Our Advantages</strong></h4>
                 <ul>
                 <li>Engineer systems.</li>
                 <li>Hydraulic retrofits.</li>
@@ -36,16 +35,18 @@ function Homepage() {
                 <li>Quick delivery.</li>
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div className="col-md-6">
                 <img
                     src={require("../assets/images/maintenance-1.png")}
-                    class="img-fluid"
+                    className="img-fluid"
                     id="maintenance1"
+                    alt="maintenance one pic"
                 />
                 <img
                     src={require("../assets/images/oil-analysis2.png")}
-                    class="img-fluid"
+                    className="img-fluid"
                     id="oilanalysis2"
+                    alt="oil analysis two pic"
                 />
             </div>
         </div>
