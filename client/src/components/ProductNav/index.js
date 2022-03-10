@@ -10,13 +10,14 @@ function ProductNav() {
                     <h5 class="link1" href="#">Pumps</h5>
                     <dl>
                         <dt>
+                            {/* Might need to useState on which link is active */}
                             <Link to="/Products" class="link2 active2"> Piston Pumps  </Link> 
                         </dt>
                         <dt>
                             <Link to="/Products/VanePumps" class="link2"  href="/Products/vanepumps.html"> Vane Pumps </Link> 
                         </dt>
                         <dt>
-                            <a class="link2"  href="/Products/gearpumps.html"> Gear Pumps </a> 
+                            <Link to="/Products/GearPumps" class="link2"> Gear Pumps </Link> 
                         </dt>
                     </dl>
                 </li>
@@ -25,10 +26,10 @@ function ProductNav() {
                     <h5 class="link1" href="#">Motors</h5>
                     <dl>
                         <dt>
-                            <a class="link2"  href="/Products/gerolermotors.html"> Geroler Motors  </a> 
+                            <Link to="/Products/GerolerMotors" class="link2"> Geroler Motors  </Link> 
                         </dt>
                         <dt>
-                            <a class="link2"  href="/Products/vanemotors.html"> Vane Motors </a> 
+                            <Link to="/Products/VaneMotors" class="link2"> Vane Motors </Link> 
                         </dt>
                         
                     </dl>
@@ -37,7 +38,7 @@ function ProductNav() {
                     <dl>
                         <h5 class="link1"  href="#">Flowmeters</h5>
                         <dt>
-                            <a class="link2"  href="/Products/flowmeters.html"> Flowmeters  </a> 
+                            <Link to="/Products/FlowMeters" class="link2"> Flowmeters  </Link> 
                         </dt>
                     </dl>
                 </li>
@@ -45,10 +46,10 @@ function ProductNav() {
                     <h5 class="link1" href="#">Valves</h5>
                     <dl>
                         <dt>
-                            <a class="link2"  href="/Products/directional-control-valves.html"> Directional Control  </a> 
+                            <Link to="/Products/DirectionalControlValves" class="link2"> Directional Control  </Link> 
                         </dt>
                         <dt>
-                            <a class="link2"  href="/Products/flow-control-valves.html"> Flow Control </a> 
+                            <Link to="/Products/FlowControlValves" class="link2"> Flow Control </Link> 
                         </dt>
                     </dl>
                 </li>
@@ -56,7 +57,7 @@ function ProductNav() {
                     <h5 class="link1"> Manifolds</h5>
                     <dl>
                         <dt>
-                            <a class="link2" href="/Products/manifolds.html"> Manifolds</a>
+                            <Link to="/Products/Manifolds" class="link2"> Manifolds</Link>
                         </dt>
                     </dl>
                 </li>

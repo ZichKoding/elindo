@@ -240,3 +240,95 @@
   margin-top: 50px;
   margin-bottom: 20px;
 }
+
+
+/* PUMP FORM */
+.pump-labels {
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.hydraulic-pump-configurator {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.pump-labels-final {
+  width: 100px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* PUMP FORM END */
+
+/* FLOWMETER-FORM */
+
+.flowmeter-form-labels {
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.flowmeter-configurator {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.flowmeter-labels-final {
+  width: 100px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* FLOWMETER-FORM END */
+
+/* MOTOR-FORM */
+
+.motor-form-labels {
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.hydraulicMotor1Configurator {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.motor-labels-final {
+  width: 100px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* MOTOR-FORM END */
+
+/* TABLE-SORT-PART-NUMBER */
+
+.table-sortable th {
+  cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+  content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+  content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE-SORT-PART-NUMBER END */
