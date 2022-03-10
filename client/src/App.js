@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 import Homepage from './pages/Homepage';
+// Product page imports lines 13-21
 import Products from './pages/Products';
 import VanePumps from './pages/VanePumps';
 import GearPumps from './pages/GearPumps';
@@ -18,6 +19,8 @@ import FlowMeters from './pages/FlowMeters';
 import DirectionalControlValves from './pages/DirectionalControlValves';
 import FlowControlValves from './pages/FlowControlValves';
 import Manifolds from './pages/Manifolds';
+// Services page imports
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -31,6 +34,7 @@ function App() {
 
           <Route path="/" element={<Homepage />} />
 
+          {/* All Product Pages from lines 35-43 */}
           <Route path="/Products" element={<Products />} />
             <Route path="/Products/VanePumps" element={<VanePumps />} />
             <Route path="/Products/GearPumps" element={<GearPumps />} />
@@ -40,6 +44,9 @@ function App() {
             <Route path="/Products/DirectionalControlValves" element={<DirectionalControlValves />} />
             <Route path="/Products/FlowControlValves" element={<FlowControlValves />}  />
             <Route path="/Products/Manifolds" element={<Manifolds />} />
+          
+          {/* Services pages */}
+          <Route path="Services" element={<Services />} />
           
         </Routes>
 
