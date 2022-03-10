@@ -1,5 +1,5 @@
 import React from "react";
-import ProductForm from "../components/ProductForm";
+import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function GearPumps() {
@@ -117,7 +117,7 @@ function GearPumps() {
                         </table>
                         <br /> <br />
                     </div>
-                    <ProductForm />
+                    <HydraulicPumpForm />
                 </div>
                 <ProductNav />
             </div>

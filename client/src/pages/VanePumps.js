@@ -1,5 +1,5 @@
 import React from "react";
-import ProductForm from "../components/ProductForm";
+import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function VanePumps() {
@@ -457,7 +457,7 @@ function VanePumps() {
               </table>
               <br />
             </div>
-            <ProductForm />
+            <HydraulicPumpForm />
           </div>
           <ProductNav />
         </div>
