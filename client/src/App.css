@@ -241,6 +241,11 @@
   margin-bottom: 20px;
 }
 
+/* MANIFOLD `<a>` ELEMENTS */
+.pdf-btns {
+  display: inline-block !important;
+}
+
 
 /* PUMP FORM */
 .pump-labels {
