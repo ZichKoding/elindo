@@ -21,6 +21,7 @@ import FlowControlValves from './pages/FlowControlValves';
 import Manifolds from './pages/Manifolds';
 // Services page imports
 import Services from './pages/Services';
+import PMPrograms from './pages/PreventiveMaintenancePrograms';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           
           {/* Services pages */}
           <Route path="Services" element={<Services />} />
+            <Route path="/Services/PreventiveMaintenancePrograms" element={<PMPrograms />} />
           
         </Routes>
 
