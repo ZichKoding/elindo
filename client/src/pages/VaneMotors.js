@@ -1,5 +1,5 @@
 import React from "react";
-import ProductForm from "../components/ProductForm";
+import HydraulicMotorForm from "../components/HydraulicMotorForm";
 import ProductNav from "../components/ProductNav";
 
 
@@ -66,7 +66,7 @@ function VaneMotors() {
                         </tr>
                     </table>
                     <br />
-                    <ProductForm />
+                    <HydraulicMotorForm />
                 </div>
                 <ProductNav />
             </div>        

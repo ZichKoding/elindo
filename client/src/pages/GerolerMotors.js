@@ -1,5 +1,5 @@
 import React from "react";
-import ProductForm from "../components/ProductForm";
+import HydraulicMotorForm from "../components/HydraulicMotorForm"
 import ProductNav from "../components/ProductNav";
 
 function GerolerMotors() {
@@ -67,7 +67,7 @@ function GerolerMotors() {
                         </tr>
                     </table>
                     <br />&gt;
-                    <ProductForm />
+                    <HydraulicMotorForm />
                 </div>
                 <ProductNav />
             </div>
