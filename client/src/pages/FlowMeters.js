@@ -1,5 +1,5 @@
 import React from "react";
-import ProductForm from "../components/ProductForm";
+import HydraulicFlowMeterForm from "../components/HydraulicFlowMeterForm";
 import ProductNav from "../components/ProductNav";
 
 function FlowMeters() {
@@ -46,7 +46,7 @@ function FlowMeters() {
                         </tr>
                     </table>
                     <br />        
-                    <ProductForm />
+                    <HydraulicFlowMeterForm />
                 </div>
                 <ProductNav />
             </div>    
