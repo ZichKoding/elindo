@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 function Products() {
     return (
@@ -447,10 +448,10 @@ function Products() {
                             <h5 class="link1" href="#">Pumps</h5>
                             <dl>
                                 <dt>
-                                    <a class="link2 active2"  href="/Products/products.html"> Piston Pumps  </a> 
+                                    <Link to="/Products" class="link2 active2"> Piston Pumps  </Link> 
                                 </dt>
                                 <dt>
-                                    <a class="link2"  href="/Products/vanepumps.html"> Vane Pumps </a> 
+                                    <Link to="/Products/VanePumps" class="link2"  href="/Products/vanepumps.html"> Vane Pumps </Link> 
                                 </dt>
                                 <dt>
                                     <a class="link2"  href="/Products/gearpumps.html"> Gear Pumps </a> 

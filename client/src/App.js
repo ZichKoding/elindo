@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
+import VanePumps from './pages/VanePumps';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
           <Route path="/" element={<Homepage />} />
           <Route path="/Products" element={<Products />} />
+          <Route path="/Products/VanePumps" element={<VanePumps />} />
           
         </Routes>
 
