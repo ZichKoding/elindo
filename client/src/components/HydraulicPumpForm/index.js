@@ -33,13 +33,13 @@ function HydraulicPumpForm() {
 
 
     return (
-        <div class="col-md-12 bg-light">
+        <div className="col-md-12 bg-light">
             <p> 
                 <strong> Not sure what hydraulic pump to select?</strong> Send us your technical requirements and we will work with you to select the proper pump for your application. 
             </p>
 
             <div>
-                <h5 class = "hydraulic-pump-configurator">
+                <h5 className = "hydraulic-pump-configurator">
                     Hydraulic Pump Quote Configurator
                 </h5>
     
@@ -78,15 +78,13 @@ function HydraulicPumpForm() {
                                 </u></h5>
                             </legend>
         
-                            {/* <label class="pump-labels" for="gpmPump1" style="display:inline-block">* GPM (single pump): </label> */}
-                            <label class="pump-labels" for="gpmPump1">* GPM (single pump): </label>
+                            <label className="pump-labels form-label-style" for="gpmPump1">* GPM (single pump): </label>
                             <input type="number" id="gpmPump1"  name="gpmPump1" placeholder = "GPM required" required /><br />
                             
-                            {/* <label class="pump-labels" for="pressure" style="display:inline-block"> * Pressure (psi):</label> */}
-                            <label class="pump-labels" for="pressure"> * Pressure (psi):</label>
+                            <label className="pump-labels form-label-style" for="pressure"> * Pressure (psi):</label>
                             <input type="number" id="pressure" name="pressure" placeholder = "Max Cont. pressure" required /> <br />
                             
-                            <label class="pump-labels" for="rpm">* RPM: </label>
+                            <label className="pump-labels" for="rpm">* RPM: </label>
                             <input type="number" id="rpm" name="rpm" placeholder = "Max Cont. RPM" required /><br /> <br />
                     
                             
@@ -122,10 +120,10 @@ function HydraulicPumpForm() {
                                 </u> </h5> 
                             </legend>
 
-                            <label class="pump-labels" for="gpmPump2" >* GPM (second stage): </label>
+                            <label className="pump-labels" for="gpmPump2" >* GPM (second stage): </label>
                             <input type="number" id="gpmPump2" name="gpmPump2" placeholder = "GPM required" required /><br />
                             
-                            <label class="pump-labels" for="pressure2" > * Pressure (psi):</label>
+                            <label className="pump-labels" for="pressure2" > * Pressure (psi):</label>
                             <input type="number" id="pressure2" name="pressure2" placeholder = "Max Cont. pressure 2" required /> <br /> 
                             
                             
@@ -162,10 +160,10 @@ function HydraulicPumpForm() {
                                 </u> </h5> 
                             </legend> 
         
-                            <label class="pump-labels" for="gpmPump3" >* GPM (third stage): </label>
+                            <label className="pump-labels" for="gpmPump3" >* GPM (third stage): </label>
                             <input type="number" id="gpmPump3" name="gpmPump3" placeholder = "GPM required" required /><br />
                             
-                            <label class="pump-labels" for="pressure3" > * Pressure (psi):</label>
+                            <label className="pump-labels" for="pressure3" > * Pressure (psi):</label>
                             <input type="number" id="pressure3" name="pressure3" placeholder = "Max Cont. pressure 3" required /> <br />
         
                             <h5>
@@ -196,27 +194,23 @@ function HydraulicPumpForm() {
 
 
         
-                        <label class="pump-labels-final" for="firstname" >* First Name: </label> 
+                        <label className="pump-labels-final" for="firstname" >* First Name: </label> 
                         <input type="text" id="firstname" name="firstname" placeholder = " First Name" required /> <br />
                         
-                        <label class="pump-labels-final" for="lastname">* Last Name: </label>
+                        <label className="pump-labels-final" for="lastname">* Last Name: </label>
                         <input type="text" id="lastname" name="firstname" placeholder = "Last Name" required /> <br />
                         
-                        <label  class="pump-labels-final"for="company" > Company: </label>
+                        <label  className="pump-labels-final"for="company" > Company: </label>
                         <input type="text" id="company" name="company" placeholder = "Your company" /> <br />
                         
-                        <label class="pump-labels-final" for="email"> * E-mail: </label>
+                        <label className="pump-labels-final" for="email"> * E-mail: </label>
                         <input type="email" id="email" name="email" placeholder = "Your E-mail" required /> <br />
                         
-                        {/* <label for="notes" style = "display:block" > Notes: </label> */}
-                        <label for="notes"> Notes: </label>
+                        <label className="form-display-block" for="notes"> Notes: </label>
                             
-                        {/* <textarea type="text" id="notes" name="notes" placeholder = "Include any additional information"
-                        style= "width:500px; height:300px; display:block"> </textarea> <br /> */}
-                        <textarea type="text" id="notes" name="notes" placeholder = "Include any additional information"> </textarea> <br />
+                        <textarea className="form-textarea" type="text" id="notes" name="notes" placeholder = "Include any additional information"> </textarea> <br />
                         
-                        {/* <input type="text" name="_honey" style="display:none" /> */}
-                        <input type="text" name="_honey" />
+                        <input className="form-display-none" type="text" name="_honey" />
                         <br /><br />
                         <input type="submit" name= "submit" value="Submit" />
                     </fieldset>

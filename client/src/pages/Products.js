@@ -15,16 +15,17 @@ function Products() {
 
                         <table class= "table table-hover table-striped table-bordered">
                             
-                            <tr>
-                                <thead />
-                                <th colspan="4" class="a10-table-title">A10V series Pumps</th>
-                            </tr>
-                            <tr class="inside-table-text">
-                                <td>Displacement</td>
-                                <td>Pressure</td>
-                                <td>Peak Pressure</td>
-                                <td> Speed</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th colspan="4" class="a10-table-title">A10V series Pumps</th>
+                                </tr>
+                                <tr class="inside-table-text">
+                                    <td>Displacement</td>
+                                    <td>Pressure</td>
+                                    <td>Peak Pressure</td>
+                                    <td> Speed</td>
+                                </tr>
+                            </thead>
                                 
                     
                             <tr class="inside-table-text">
@@ -78,10 +79,12 @@ function Products() {
                         <a href={require("../assets/pdf files/radial-piston-pumps.pdf")} class="btn btn-info">Download PDF</a> <br/> <br/>
 
                         <table class= "table table-hover table-striped table-bordered">
-                            <tr>
-                                <thead />
-                                <th colspan="14" class="a10-table-title">High Pressure Pumps</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th colspan="14" class="a10-table-title">High Pressure Pumps</th>
+                                </tr>
+                            </thead>
+
                             <tr class="inside-table-text">
                                 <td>Series</td>
                                 <td>Pistons</td>
@@ -97,7 +100,6 @@ function Products() {
                                 <td>8,000 <br/> psi</td>
                                 <td>9,000 <br/> psi</td>
                                 <td>10,000 <br/> psi</td>
-
                             </tr>
                                 
                             

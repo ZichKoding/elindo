@@ -30,12 +30,10 @@ function HydraulicFlowMeterForm() {
                         </u>
                     </h6>
                     
-                    {/* style="display:inline-block" ADD CSS TO ELEMENT BELOW */}
-                    <label className="flowmeter-form-labels" for="torque"> GPM: </label>
+                    <label className="flowmeter-form-labels form-label-style" for="torque"> GPM: </label>
                     <input type="number" id="torque" placeholder="gpm" required /><br />
                     
-                    {/* style="display:inline-block" ADD CSS TO ELEMENT BELOW */}
-                    <label className="flowmeter-form-labels" for="pressure"> Pressure (psi):</label>
+                    <label className="flowmeter-form-labels form-label-style" for="pressure"> Pressure (psi):</label>
                     <input type="number" id="pressure" name="pressure" placeholder = "Max Cont. pressure" required /> <br />
                     
                     <label className="flowmeter-form-labels" for="rpm">Type of fluid </label>
@@ -79,13 +77,13 @@ function HydraulicFlowMeterForm() {
                     <input type="email" id="email" name="email" placeholder = "Your E-mail" required /> <br />
                     
                     {/* style = "display:block" ADD CSS TO ELEMENT BELOW */}
-                    <label for="notes"> Notes: </label>
+                    <label className="form-display-block" for="notes"> Notes: </label>
                     
                     {/* style= "width:500px; height:300px; display:block" ADD CSS TO ELEMENT BELOW */}
-                    <textarea type="text" id="notes" name="notes" placeholder = "Include any additional information"> </textarea> <br />
+                    <textarea className="form-textarea" type="text" id="notes" name="notes" placeholder = "Include any additional information"> </textarea> <br />
                     
                     {/* style="display:none" ADD CSS TO ELEMENT BELOW */}
-                    <input type="text" name="_honey" />
+                    <input className="form-display-none" type="text" name="_honey" />
                       
                     <input type="submit" name= "submit" value="Submit" />
                       

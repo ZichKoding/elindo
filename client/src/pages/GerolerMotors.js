@@ -66,7 +66,7 @@ function GerolerMotors() {
                             <td>10-446</td>
                         </tr>
                     </table>
-                    <br />&gt;
+                    <br />
                     <HydraulicMotorForm />
                 </div>
                 <ProductNav />
