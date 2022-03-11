@@ -76,13 +76,10 @@ function HydraulicFlowMeterForm() {
                     <label className="flowmeter-labels-final" for="email"> * E-mail: </label>
                     <input type="email" id="email" name="email" placeholder = "Your E-mail" required /> <br />
                     
-                    {/* style = "display:block" ADD CSS TO ELEMENT BELOW */}
                     <label className="form-display-block" for="notes"> Notes: </label>
                     
-                    {/* style= "width:500px; height:300px; display:block" ADD CSS TO ELEMENT BELOW */}
                     <textarea className="form-textarea" type="text" id="notes" name="notes" placeholder = "Include any additional information"> </textarea> <br />
                     
-                    {/* style="display:none" ADD CSS TO ELEMENT BELOW */}
                     <input className="form-display-none" type="text" name="_honey" />
                       
                     <input type="submit" name= "submit" value="Submit" />
