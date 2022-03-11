@@ -1,23 +1,75 @@
-import logo from './logo.svg';
 import './App.css';
+import { 
+  BrowserRouter as Router, 
+  Route, 
+  Routes 
+} from 'react-router-dom';
+
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+
+import Homepage from './pages/Homepage';
+// Product page imports lines 13-21
+import Products from './pages/Products';
+import VanePumps from './pages/VanePumps';
+import GearPumps from './pages/GearPumps';
+import GerolerMotors from './pages/GerolerMotors';
+import VaneMotors from './pages/VaneMotors';
+import FlowMeters from './pages/FlowMeters';
+import DirectionalControlValves from './pages/DirectionalControlValves';
+import FlowControlValves from './pages/FlowControlValves';
+import Manifolds from './pages/Manifolds';
+// Services page imports
+import Services from './pages/Services';
+import PMPrograms from './pages/PreventiveMaintenancePrograms';
+import Inventory from './pages/Inventory';
+import Formulas from './pages/Formulas';
+import Interactive from './pages/Interactive';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <header className="App-header">
+          <Nav />
+        </header>
+
+        <Routes>
+
+          <Route path="/" element={<Homepage />} />
+
+          {/* All Product Pages from lines 35-43 */}
+          <Route path="/Products" element={<Products />} />
+            <Route path="/Products/VanePumps" element={<VanePumps />} />
+            <Route path="/Products/GearPumps" element={<GearPumps />} />
+            <Route path="/Products/GerolerMotors" element={<GerolerMotors />} />
+            <Route path="/Products/VaneMotors" element={<VaneMotors />} />
+            <Route path="/Products/FlowMeters" element={<FlowMeters />} />
+            <Route path="/Products/DirectionalControlValves" element={<DirectionalControlValves />} />
+            <Route path="/Products/FlowControlValves" element={<FlowControlValves />}  />
+            <Route path="/Products/Manifolds" element={<Manifolds />} />
+          
+          {/* Services pages */}
+          <Route path="/Services" element={<Services />} />
+            <Route path="/Services/PreventiveMaintenancePrograms" element={<PMPrograms />} />
+          
+          {/* Inventory */}
+          <Route path="/Inventory" element={<Inventory />} />
+
+          {/* Formulas */}
+          <Route path="/Formulas" element={<Formulas />} />
+          
+          {/* Interactive */}
+          <Route path="/Interactive" element={<Interactive />} />
+
+          {/* Contact Us */}
+          <Route path="/ContactUs" element={<ContactUs />} />
+          
+        </Routes>
+
+        <Footer />
+      </Router>
     </div>
   );
 }
