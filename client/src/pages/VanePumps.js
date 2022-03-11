@@ -13,14 +13,15 @@ function VanePumps() {
               <a href={require("../assets/pdf files/v10-v20-vane-pump-catalog.pdf")} className="btn btn-info">Download PDF</a> <br/> <br/>
 
               <table className="table table-hover table-striped table-bordered">
-                <tr>
-                  <thead />
-                  <th colspan="3" className="product-title-table-text">Vane Pumps</th>
-                </tr>
-                <tr className="inside-table-text">
-                  <td>Series</td>
-                  <td>GPM at 1,200 and 100 psi</td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th colspan="3" className="product-title-table-text">Vane Pumps</th>
+                  </tr>
+                  <tr className="inside-table-text">
+                    <td>Series</td>
+                    <td>GPM at 1,200 and 100 psi</td>
+                  </tr>
+                </thead>
                 
                 <tr className="inside-table-text">
                   <td>V10</td>
@@ -71,15 +72,16 @@ function VanePumps() {
               <a href={require("../assets/pdf files/vho-vq-hydraulic-pumps-catalog.pdf")} className="btn btn-info">Download PDF</a> <br/> <br/>
 
               <table className="table table-hover table-striped table-bordered">
-                <tr>
-                  <thead />
-                  <th colspan="2" className="product-title-table-text">Single Vane Pumps</th>
-                </tr>
+                <thead>
+                  <tr>
+                    <th colspan="2" className="product-title-table-text">Single Vane Pumps</th>
+                  </tr>
 
-                <tr className="inside-table-text">
-                  <td>Series </td>
-                  <td>GPM at 1,200 and 100 psi</td>
-                </tr>
+                  <tr className="inside-table-text">
+                    <td>Series </td>
+                    <td>GPM at 1,200 and 100 psi</td>
+                  </tr>
+                </thead>
                 
                 <tr className="inside-table-text">
                   <td>20V (VQ)</td>
@@ -138,20 +140,22 @@ function VanePumps() {
               </table>
               <br />
               <table className= "table table-hover table-striped table-bordered">
-                <tr>
-                  <thead />
-                  <th colspan="3" className="product-title-table-text">Double Vane Pumps</th>
-                </tr>
+                <thead>
+                  <tr>
+                    <th colspan="3" className="product-title-table-text">Double Vane Pumps</th>
+                  </tr>
 
-                <tr className="inside-table-text">
-                  <td>Series </td>
-                  <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (front covers)</td>
-                  <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (back covers) </td>
-                </tr>
+                  <tr className="inside-table-text">
+                    <td>Series </td>
+                    <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (front covers)</td>
+                    <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (back covers) </td>
+                  </tr>
+                </thead>
 
                 <tr className="inside-table-text">
                 
-                  <td rowspan="3">2520V (VQ)<br />
+                  <td rowspan="3">
+                    2520V (VQ)<br />
                     3520V (VQ) <br />
                     3525V (VQ)<br />
                     4520V (VQ)<br />
@@ -206,16 +210,17 @@ function VanePumps() {
               </table>
               <br />
               <table className= "table table-hover table-striped table-bordered">
-                <tr>
-                  <thead />
-                  <th colspan="4" className="product-title-table-text"> Triple Vane Pumps</th>
-                </tr>
-                <tr className="inside-table-text">
-                  <td>Series </td>
-                  <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (front covers)</td>
-                  <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (center covers) </td>
-                  <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (back covers) </td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th colspan="4" className="product-title-table-text"> Triple Vane Pumps</th>
+                  </tr>
+                  <tr className="inside-table-text">
+                    <td>Series </td>
+                    <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (front covers)</td>
+                    <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (center covers) </td>
+                    <td>GPM at <br /> 1,200 rpm and 100 psi <br /> (back covers) </td>
+                  </tr>
+                </thead>
 
                 <tr className="inside-table-text">
                   <td rowspan="3">
@@ -302,20 +307,21 @@ function VanePumps() {
               <a href={require("../assets/pdf files/variable-vane-pump-catalog.pdf")} className="btn btn-info">Download PDF</a> <br/> <br/>
 
               <table className= "table table-hover table-striped table-bordered ">
-                <tr>
-                  <thead />
-                  <th colspan="7" className="product-title-table-text"> Variable Displacement Vane Pumps</th>
-                </tr>
+                <thead>
+                  <tr>
+                    <th colspan="7" className="product-title-table-text"> Variable Displacement Vane Pumps</th>
+                  </tr>
 
-                <tr className="inside-table-text">
-                  <td>Model </td>
-                  <td>*GPM </td>
-                  <td>PSI  </td>
-                  <td>RPM </td>
-                  <td> Pressure comp range <br /> (psi)</td>
-                  <td> Displacement <br /> cu in²</td>
-                  <td> input HP at <br /> max psi <br /> & 1800 rpm </td>
-                </tr>
+                  <tr className="inside-table-text">
+                    <td>Model </td>
+                    <td>*GPM </td>
+                    <td>PSI  </td>
+                    <td>RPM </td>
+                    <td> Pressure comp range <br /> (psi)</td>
+                    <td> Displacement <br /> cu in²</td>
+                    <td> input HP at <br /> max psi <br /> & 1800 rpm </td>
+                  </tr>
+                </thead>
 
                 <tr className="inside-table-text">
                   <td>
