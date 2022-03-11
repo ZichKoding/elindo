@@ -22,6 +22,7 @@ import Manifolds from './pages/Manifolds';
 // Services page imports
 import Services from './pages/Services';
 import PMPrograms from './pages/PreventiveMaintenancePrograms';
+import Inventory from './pages/Inventory';
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
           <Route path="/Products" element={<Products />} />
             <Route path="/Products/VanePumps" element={<VanePumps />} />
             <Route path="/Products/GearPumps" element={<GearPumps />} />
-            <Route path="Products/GerolerMotors" element={<GerolerMotors />} />
+            <Route path="/Products/GerolerMotors" element={<GerolerMotors />} />
             <Route path="/Products/VaneMotors" element={<VaneMotors />} />
             <Route path="/Products/FlowMeters" element={<FlowMeters />} />
             <Route path="/Products/DirectionalControlValves" element={<DirectionalControlValves />} />
@@ -47,8 +48,11 @@ function App() {
             <Route path="/Products/Manifolds" element={<Manifolds />} />
           
           {/* Services pages */}
-          <Route path="Services" element={<Services />} />
+          <Route path="/Services" element={<Services />} />
             <Route path="/Services/PreventiveMaintenancePrograms" element={<PMPrograms />} />
+          
+          {/* Inventory */}
+          <Route path="/Inventory" element={<Inventory />} />
           
         </Routes>
 

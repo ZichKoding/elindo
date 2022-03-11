@@ -4,7 +4,8 @@ const { Parts } = require('../models');
 const partsController = {
     // Get all parts
     getAllParts(req, res) {
-        Parts.find()
+        Parts.find({})
+            .select('-__v')
             // return response in json format
             .then(dbPartsData => res.json(dbPartsData))
             // log and return an error if one occurs

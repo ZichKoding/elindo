@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const apiRoutes = require('./api/');
+const apiRoutes = require('./api');
 
 // add prefixes to routes ex. '/parts'
 router.use('/api', apiRoutes);
