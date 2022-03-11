@@ -1,25 +1,31 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Inventory() {
+    const [initialParts, setInitialParts] = useState([]);
+
+    useEffect(() => {
+        getInventory();
+    }, []);
 
     // fetch data from server
-    let inventoryData = 0;
-
     const getInventory = () => {
         fetch('/api/parts')
             .then(response => {
-                return response.json;
+                if (!response.ok) {
+                    return response.statusText()
+                }
+                return response.json();
             })
             .then(invDataArr => {
+                setInitialParts(invDataArr);
                 console.log(invDataArr);
-                inventoryData = invDataArr;
             })
-            .catch(error => console.log(error));
+            .catch(error => console.log(error)); 
     };
 
-    getInventory();
-
+    // console.log(initialParts[0]);
     return (
         <>
             <div className="col-md-12">
@@ -54,11 +60,19 @@ function Inventory() {
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>B05133002121RM</td>
-                            <td>0513R18C3VPV16SM21HYB02</td>
-                            <td>Bosch-Rexroth</td>
-                        </tr>
+                        {initialParts.map(part => (
+                            <tr key={part.id}>
+                                <td>
+                                    {part.reference}
+                                </td>
+                                <td>
+                                    {part.description}
+                                </td>
+                                <td>
+                                    {part.replacements}
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
