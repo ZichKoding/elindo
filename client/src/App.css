@@ -471,3 +471,15 @@
   font-size: 30px;
 }
 /* Interactive end */
+
+/* Contact Us beginning */
+
+.contact-iframe {
+  border: 0;
+}
+
+.contact-your-message-input {
+  display: none;
+}
+
+/* Contact Us end */
