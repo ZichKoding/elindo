@@ -25,6 +25,7 @@ import PMPrograms from './pages/PreventiveMaintenancePrograms';
 import Inventory from './pages/Inventory';
 import Formulas from './pages/Formulas';
 import Interactive from './pages/Interactive';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
           
           {/* Interactive */}
           <Route path="/Interactive" element={<Interactive />} />
+
+          {/* Contact Us */}
+          <Route path="/ContactUs" element={<ContactUs />} />
           
         </Routes>
 
