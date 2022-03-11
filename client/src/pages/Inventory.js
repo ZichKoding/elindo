@@ -62,13 +62,13 @@ function Inventory() {
                     <tbody>
                         {initialParts.map(part => (
                             <tr key={part.id}>
-                                <td>
+                                <td key={part.reference}>
                                     {part.reference}
                                 </td>
-                                <td>
+                                <td key={part.description}>
                                     {part.description}
                                 </td>
-                                <td>
+                                <td key={part.replacements}>
                                     {part.replacements}
                                 </td>
                             </tr>

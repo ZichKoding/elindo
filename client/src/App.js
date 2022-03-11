@@ -23,6 +23,7 @@ import Manifolds from './pages/Manifolds';
 import Services from './pages/Services';
 import PMPrograms from './pages/PreventiveMaintenancePrograms';
 import Inventory from './pages/Inventory';
+import Formulas from './pages/Formulas';
 
 function App() {
   return (
@@ -53,6 +54,9 @@ function App() {
           
           {/* Inventory */}
           <Route path="/Inventory" element={<Inventory />} />
+
+          {/* Formulas */}
+          <Route path="/Formulas" element={<Formulas />} />
           
         </Routes>
 
