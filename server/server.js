@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
 const db = require('./config/connection');
-require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
