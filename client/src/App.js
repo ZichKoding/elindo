@@ -2,7 +2,7 @@ import './App.css';
 import { 
   BrowserRouter as Router, 
   Route, 
-  Routes 
+  Routes
 } from 'react-router-dom';
 
 import Nav from './components/Nav';
@@ -22,6 +22,7 @@ import Manifolds from './pages/Manifolds';
 // Services page imports
 import Services from './pages/Services';
 import PMPrograms from './pages/PreventiveMaintenancePrograms';
+
 import Inventory from './pages/Inventory';
 import Formulas from './pages/Formulas';
 import Interactive from './pages/Interactive';
@@ -37,9 +38,10 @@ function App() {
 
         <Routes>
 
+          {/* Homepage */}
           <Route path="/" element={<Homepage />} />
 
-          {/* All Product Pages from lines 35-43 */}
+          {/* All Product Pages from lines 44-53 */}
           <Route path="/Products" element={<Products />} />
             <Route path="/Products/VanePumps" element={<VanePumps />} />
             <Route path="/Products/GearPumps" element={<GearPumps />} />
