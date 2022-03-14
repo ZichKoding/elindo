@@ -8,7 +8,6 @@ function ProductNav() {
     useEffect(() => {
         const url = window.location.pathname;
         setPathName(url);
-        console.log(pathName);
     });
 
 
