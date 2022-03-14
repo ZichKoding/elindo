@@ -1,17 +1,99 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Pagination from "react-bootstrap/Pagination"
+
 
 function Inventory() {
-    const [initialParts, setInitialParts] = useState([]);
+    const [isActive, setIsActive] = useState(0);
+    const [isInventory, setIsInventory] = useState([]);
+
+    let partsList = [];
 
     useEffect(() => {
         getInventory();
     }, []);
 
+    function InventoryItems(initParts) {
+        
+        // store inventory items
+        const itemsPerPage = [];
+        // store page numbers
+        const pageElements = [];
+
+
+        // const displayItems = () => {
+        //get amount of pages needed
+        const pages = Math.ceil(initParts.length/25);
+        console.log(pages);
+        const itemStart = 0;
+        const itemEnd = 25;
+        let active;
+
+        for (let i = 1; i <= pages; i++) {
+            pageElements.push(
+                <Pagination.Item 
+                    key={i}
+                    onClick={setIsActive(i)}
+                    active={isActive === i}
+                >
+                        {i}
+                </Pagination.Item>
+            );
+        }
+        // multiples of 25 per page.
+
+        try {
+            for (let i = itemStart; i <= itemEnd; i++) {
+                itemsPerPage.push(
+                    <tr key={`tr${i}`}>
+                        <td key={`ref${i}`}>
+                            {initParts[i].reference}
+                        </td>
+                        <td key={`des${i}`}>
+                            {initParts[i].description}
+                        </td>
+                        <td key={`${i}`}>
+                            {initParts[i].replacements}
+                        </td>
+                    </tr>
+                )
+            };
+        } catch (error) {
+            console.error(error);
+        }
+        // }
+        // return those items with the conditionally rendered items and page numbers
+        return (
+            <>
+                <table
+                        className="my-talbe-sort table table-hover table-striped table-bordered"
+                        id="myTable"
+                    >
+                        <thead>
+                            <tr>
+                                <th>Reference Number</th>
+                                <th>Description / Long Part Number</th>
+                                <th>Alternative replacement for:</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                        {itemsPerPage}
+                    </tbody>
+                </table>
+                <Pagination>
+                    {pageElements}
+                </Pagination>
+            </>
+        );
+    };
+    
+
+
+
     // fetch data from server
-    const getInventory = () => {
-        fetch('/api/parts')
+    const getInventory = async () => {
+        await fetch('/api/parts')
             .then(response => {
                 if (!response.ok) {
                     return response.statusText()
@@ -19,13 +101,22 @@ function Inventory() {
                 return response.json();
             })
             .then(invDataArr => {
-                setInitialParts(invDataArr);
-                console.log(invDataArr);
+                // setInitialParts(invDataArr);
+                partsList = invDataArr;
+                console.log(partsList);
+                setIsInventory(InventoryItems(invDataArr));
             })
             .catch(error => console.log(error)); 
     };
 
-    // console.log(initialParts[0]);
+    // get active page number
+    const activated = (num) => {
+        console.log(num);
+        return setIsActive(num);
+    }
+
+    // if (isActive)
+
     return (
         <>
             <div className="col-md-12">
@@ -36,45 +127,18 @@ function Inventory() {
                     always <Link to="/ContactUs"> contact us </Link> for a quote request.
                 </p>
             </div>
-            <div class="col-md-12">
+            <div className="col-md-12">
                 <input
                     type="text"
                     id="myInput"
-                    onkeyup="myFunction()"
+                    // onKeyUp="myFunction()"
                     placeholder="Search for Part Number.."
                     title="Type in a name"
                 />
                 <br />
                 <br />
 
-                <table
-                    class="my-talbe-sort table table-hover table-striped table-bordered"
-                    id="myTable"
-                >
-                    <thead>
-                        <tr>
-                            <th>Reference Number</th>
-                            <th>Description / Long Part Number</th>
-                            <th>Alternative replacement for:</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {initialParts.map(part => (
-                            <tr key={part.id}>
-                                <td key={part.reference}>
-                                    {part.reference}
-                                </td>
-                                <td key={part.description}>
-                                    {part.description}
-                                </td>
-                                <td key={part.replacements}>
-                                    {part.replacements}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                {isInventory}
             </div>
         </>
     );
