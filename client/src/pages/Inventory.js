@@ -5,7 +5,7 @@ import Pagination from "react-bootstrap/Pagination"
 
 
 function Inventory() {
-    const [isActive, setIsActive] = useState(0);
+    const [isActive, setIsActive] = useState([]);
     const [isInventory, setIsInventory] = useState([]);
 
     let partsList = [];
@@ -17,7 +17,7 @@ function Inventory() {
     function InventoryItems(initParts) {
         
         // store inventory items
-        const itemsPerPage = [];
+        let itemsPerPage = [];
         // store page numbers
         const pageElements = [];
 
@@ -25,22 +25,47 @@ function Inventory() {
         // const displayItems = () => {
         //get amount of pages needed
         const pages = Math.ceil(initParts.length/25);
-        console.log(pages);
-        const itemStart = 0;
-        const itemEnd = 25;
-        let active;
 
-        for (let i = 1; i <= pages; i++) {
-            pageElements.push(
-                <Pagination.Item 
-                    key={i}
-                    onClick={setIsActive(i)}
-                    active={isActive === i}
-                >
-                        {i}
-                </Pagination.Item>
-            );
+        let activepages = [];
+
+        for(let i = 1; i <= pages; i++) {
+            activepages.push(i);
         }
+        
+        let itemStart = 0;
+        let itemEnd = 24;
+
+        function activatePage() {
+            console.log(document.activeElement.id);
+            let thisElement = document.activeElement.id;
+
+            itemEnd = (thisElement * 25) - 1;
+            itemStart += 25;
+
+
+            for (let i = itemStart; i <= itemEnd || i === partsList.length ; i++) {
+                itemsPerPage.shift();
+                console.log(itemsPerPage);
+                itemsPerPage.push(
+                    <tr key={`tr${i}`}>
+                        <td key={`ref${i}`}>
+                            {initParts[i].reference}
+                        </td>
+                        <td key={`des${i}`}>
+                            {initParts[i].description}
+                        </td>
+                        <td key={`${i}`}>
+                            {initParts[i].replacements}
+                        </td>
+                    </tr>
+                )
+            };
+            setIsActive([]);
+
+            setIsActive(itemsPerPage);
+            console.log(itemsPerPage);
+        
+        };
         // multiples of 25 per page.
 
         try {
@@ -59,6 +84,9 @@ function Inventory() {
                     </tr>
                 )
             };
+
+            setIsActive(itemsPerPage);
+            console.log(isActive); 
         } catch (error) {
             console.error(error);
         }
@@ -78,11 +106,19 @@ function Inventory() {
                             </tr>
                         </thead>
                     <tbody>
-                        {itemsPerPage}
+                        {isActive}
                     </tbody>
                 </table>
                 <Pagination>
-                    {pageElements}
+                    {activepages.map(activepage => (
+                        <Pagination.Item
+                            key={activepage}
+                            onClick={activatePage}
+                            id={`${activepage}`}
+                        >
+                            {activepage}
+                        </Pagination.Item>
+                    ))}
                 </Pagination>
             </>
         );
