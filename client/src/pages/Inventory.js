@@ -34,8 +34,9 @@ function Inventory() {
             pageElements.push(
                 <Pagination.Item 
                     key={i}
-                    onClick={setIsActive(i)}
-                    active={isActive === i}
+                    onClick={activated(i)}
+                    // active={false}
+                    id={`page${i}`}
                 >
                         {i}
                 </Pagination.Item>
@@ -112,7 +113,8 @@ function Inventory() {
     // get active page number
     const activated = (num) => {
         console.log(num);
-        return setIsActive(num);
+        let target = document.getElementById(`page${num}`);
+        console.log(target);
     }
 
     // if (isActive)
