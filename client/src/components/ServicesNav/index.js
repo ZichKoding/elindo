@@ -1,7 +1,15 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function ServicesNav() {
+    const [pathName, setPathName] = useState();
+
+    useEffect(() => {
+        const url = window.location.pathname;
+        setPathName(url);
+    });
+
     return (
         <>
             <div className="col-md-3 ">
@@ -13,7 +21,7 @@ function ServicesNav() {
 
                     <dl>
                         <dt>
-                            <Link to="/Services" className="link2 active2"> Laboratory testing  </Link> 
+                            <Link to="/Services" className={pathName === "/Services" ? "link2 active2" : "link2"}> Laboratory testing  </Link> 
                         </dt>
                     </dl>
 
@@ -21,7 +29,7 @@ function ServicesNav() {
                         <h5 className="link1" href="#">Preventive Maintenance</h5>
                         <dl>
                             <dt>
-                                <Link to="/Services/PreventiveMaintenancePrograms" className="link2"> Programs  </Link> 
+                                <Link to="/Services/PreventiveMaintenancePrograms" className={pathName === "/Services/PreventiveMaintenancePrograms" ? "link2 active2" : "link2"}> Programs  </Link> 
                             </dt>
                         </dl>
                     </li>
