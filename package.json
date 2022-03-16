@@ -2,7 +2,7 @@
   "name": "elindo",
   "version": "1.0.0",
   "description": "tu.biz website converted to MERN stack.",
-  "main": "server/server.js",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^7.0.0"
