@@ -10,12 +10,13 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(cors());
+
 app.use(require('./routes'));
 
 // Use this to log mongo queries being executed!
 mongoose.set('debug', true);
 
-// Serve up static assets
 if( process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
