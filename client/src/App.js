@@ -1,7 +1,7 @@
 import './App.css';
 import { 
   BrowserRouter as Router, 
-  Route, 
+  Route,
   Routes 
 } from 'react-router-dom';
 

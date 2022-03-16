@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "tu.biz website converted to MERN stack.",
   "main": "server/server.js",
-  "dependencies": {},
+  "dependencies": {}, 
   "devDependencies": {
     "concurrently": "^7.0.0"
   },
