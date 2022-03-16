@@ -9,11 +9,10 @@ function Inventory() {
     const [isInventory, setIsInventory] = useState([]);
     const [savedParts, setSavedParts] = useState([]);
 
-    window.pathname = '/Inventory#1'
-
     let partsList = [];
     // store inventory items
     let itemsPerPage = [];
+    // store count as an array
     let activepages = [];
 
     // pagination elements stored
