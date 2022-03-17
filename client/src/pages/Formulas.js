@@ -23,6 +23,10 @@ function Formulas() {
     // EREA - Effected Rod End Area (in²) 
     const [isDia12, setIsDia12] = useState();
     const [isRod12, setIsRod12] = useState();
+    // Cyl Time (seconds)
+    const [isArea7, setIsArea7] = useState();
+    const [isStroke7, setIsStroke7] = useState();
+    const [isGpm7, setIsGpm7] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
@@ -74,6 +78,17 @@ function Formulas() {
             case 'rod12':
                 setIsRod12(activeValue);
                 break;
+            // Cyl Time (seconds)
+            case 'area7':
+                setIsArea7(activeValue);
+                break;
+            case 'stroke7':
+                setIsStroke7(activeValue);
+                break;
+            case 'gpm7':
+                setIsGpm7(activeValue);
+                break;
+            
             default:
                 console.log('Wrong elements to interact with.');
         }
@@ -192,27 +207,23 @@ function Formulas() {
         output12.innerHTML = erea12Result + " in²";
     };
     
-    
-    // const area7 = document.getElementById('area7');
-    // const stroke7 = document.getElementById('stroke7');
-    // const gpm7 = document.getElementById('gpm7');
-    // const equals7 = document.getElementById('equals7');
-    // const output7 = document.getElementById('output7');
-    // const c7 = .26;
+    // Cyl Time (seconds)
+    const output7 = document.getElementById('output7');
+    const c7 = .26;
     
     
-    // function cylTime7 (area7, stroke7, gpm7) {
-    //     return area7 * stroke7 * c7 / gpm7;
-    // };
+    function cylTime7 (area7, stroke7, gpm7) {
+        return area7 * stroke7 * c7 / gpm7;
+    };
     
-    // equals7.onclick= function () {
-    //     const areaValue = Number (dia7.value);
-    //     const strokeValue = Number (stroke7.value);
-    //     const gpmValue = Number (gpm7.value);
-    //     const cylTime7Result = cylTime7 (areaValue, strokeValue, gpmValue);
+    const equals7 = () => {
+        const areaValue = Number(isArea7);
+        const strokeValue = Number(isStroke7);
+        const gpmValue = Number(isGpm7);
+        const cylTime7Result = cylTime7(areaValue, strokeValue, gpmValue);
     
-    //     output7.innerHTML = cylTime7Result + " Seconds";
-    // };
+        output7.innerHTML = cylTime7Result + " Seconds";
+    };
     
     // const cylSpeed8 = document.getElementById('cylSpeed8');
     // const cylForce8 = document.getElementById('cylForce8');
@@ -378,12 +389,12 @@ function Formulas() {
                     <h6>
                         Cyl Time (seconds) =<br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Area (in²)" id="dia7" /> x 
+                        <input type="number" placeholder="Area (in²)" id="area7" onChange={getVariables} /> x 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Stroke (in)" id="stroke7" /> x .26 / 
+                        <input type="number" placeholder="Stroke (in)" id="stroke7" onChange={getVariables} /> x .26 / 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm7" /> 
-                        <button className="equals7" id="equals7">=</button>
+                        <input type="number" placeholder="gpm" id="gpm7" onChange={getVariables} /> 
+                        <button className="equals7" id="equals7" onClick={equals7}>=</button>
                         <output type="number" id="output7"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
