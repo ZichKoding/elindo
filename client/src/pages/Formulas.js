@@ -1,23 +1,47 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 
 function Formulas() {
-    // let pressure = document.getElementById('pressure1');
-    // let area = document.getElementById('area1');
-    // let equals = document.getElementById('equals1');
-    // let forceResult = document.getElementById('forceResult');
+    const [isPressure, setIsPressure] = useState();
+    const [isArea, setIsArea] = useState();
+
+    const  getVariables = () => {
+        let activeId = document.activeElement.id;
+        let activeValue = document.activeElement.value;
+        switch(activeId) {
+            case 'pressure1':
+                setIsPressure(activeValue);
+                console.log(`Pressure Variable is ${activeValue}`);
+                break;
+            case 'area1':
+                setIsArea(activeValue);
+                console.log(`Area Variable is ${activeValue}`);
+                break;
+            default:
+                console.log('Wrong elements to interact with.');
+        }
+    };
+
+
+    // Force
+    let forceResult = document.getElementById('forceResult');
+
+    function force1 (pressure, area) {
+        return pressure * area;
+    };
+
+    const equals = () => {
+        const pressureValue = Number(isPressure);
+        const areaValue = Number(isArea);
+        const result = force1(pressureValue, areaValue);
     
-    // function force1 (pressure, area) {
-    //     return pressure * area;
-    // }
-    
-    // equals.onclick = function () {
-    //     const pressureValue = Number(pressure.value);
-    //     const areaValue = Number(area.value);
-    //     const result = force1(pressureValue, areaValue);
-    
-    //     forceResult.innerHTML = result + " lbs";
-    // };
+        forceResult.innerHTML = result + " lbs";
+    };
+
+
+
+
     
     // const rpm2 = document.getElementById('rpm2');
     // const displacement2 = document.getElementById('displacement2');
@@ -236,10 +260,10 @@ function Formulas() {
                     <h6> 
                         Force (lbs) = <br /> <br />
                         {/* style="width: 120px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Pressure (psi)" id="pressure1" value="" /> x  
+                        <input type="number" placeholder="Pressure (psi)" id="pressure1" onChange={getVariables} /> x  
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Area (in²)" id="area1" value="" />
-                        <button className="equals" id="equals1">=</button>
+                        <input type="number" placeholder="Area (in²)" id="area1" onChange={getVariables} />
+                        <button className="equals" id="equals1" onClick={equals}>=</button>
                         <output type="number" id="forceResult"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
