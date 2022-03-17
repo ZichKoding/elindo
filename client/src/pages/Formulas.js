@@ -3,20 +3,40 @@ import { useState, useEffect } from 'react';
 
 
 function Formulas() {
+    // state for Force
     const [isPressure, setIsPressure] = useState();
     const [isArea, setIsArea] = useState();
+    // state for Gpm
+    const [isRpm2, setIsRpm2] = useState();
+    const [isDisplacement2, setIsDisplacement2] = useState();
+    // state for Hyd HP
+    const [isGpm3, setIsGpm3] = useState();
+    const [isPsi3, setIsPsi3] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
         let activeValue = document.activeElement.value;
         switch(activeId) {
+            // Force
             case 'pressure1':
                 setIsPressure(activeValue);
-                console.log(`Pressure Variable is ${activeValue}`);
                 break;
             case 'area1':
                 setIsArea(activeValue);
-                console.log(`Area Variable is ${activeValue}`);
+                break;
+            // GPM
+            case 'rpm2':
+                setIsRpm2(activeValue);
+                break;
+            case 'displacement2':
+                setIsDisplacement2(activeValue);
+                break;
+            // Hyd HP
+            case 'gpm3':
+                setIsGpm3(activeValue);
+                break;
+            case 'psi3':
+                setIsPsi3(activeValue);
                 break;
             default:
                 console.log('Wrong elements to interact with.');
@@ -39,46 +59,39 @@ function Formulas() {
         forceResult.innerHTML = result + " lbs";
     };
 
-
-
-
+    // GPM
+    const gpmresult = document.getElementById('gpmresult');
+    const c2 = 231;
     
-    // const rpm2 = document.getElementById('rpm2');
-    // const displacement2 = document.getElementById('displacement2');
-    // const equals2 = document.getElementById('equals2');
-    // const gpmresult = document.getElementById('gpmresult');
-    // const c2 = 231;
+    function gpm (rpm2, displacement2) {
+        return rpm2 * displacement2 / c2;
+    };
     
-    // function gpm (rpm2, displacement2) {
-    //     return rpm2 * displacement2 / c2;
-    // };
+    const equals2 = () => {
+        const rpmValue = Number(isRpm2);
+        const displacementValue = Number(isDisplacement2);
+        const result2 = gpm(rpmValue, displacementValue);
     
-    // equals2.onclick = function () {
-    //     const rpmValue = Number(rpm2.value);
-    //     const displacementValue = Number(displacement2.value);
-    //     const result2 = gpm(rpmValue, displacementValue);
+        gpmresult.innerHTML = result2 + " gpm";
+    };
     
-    //     gpmresult.innerHTML = result2 + " gpm";
-    // };
-    
-    
-    // const gpm3 = document.getElementById('gpm3');
-    // const psi3 = document.getElementById('psi3');
+    // Hyd HP
+    const psi3 = document.getElementById('psi3');
     // const equals3 = document.getElementById('equals3');
-    // const hydHPResult = document.getElementById('hydHPResult');
-    // const c3 = 1714;
+    const hydHPResult = document.getElementById('hydHPResult');
+    const c3 = 1714;
     
-    // function hydraulicHorsePower (gpm3, psi3) {
-    //     return gpm3 * psi3 / c3;
-    // };
+    function hydraulicHorsePower (gpm3, psi3) {
+        return gpm3 * psi3 / c3;
+    };
     
-    // equals3.onclick = function () {
-    //     const gpmValue = Number(gpm3.value);
-    //     const psiValue = Number(psi3.value);
-    //     const hpResult = hydraulicHorsePower(gpmValue, psiValue);
+    const equals3 = () => {
+        const gpmValue = Number(isGpm3);
+        const psiValue = Number(isPsi3);
+        const hpResult = hydraulicHorsePower(gpmValue, psiValue);
     
-    //     hydHPResult.innerHTML = hpResult + " HP";
-    // };
+        hydHPResult.innerHTML = hpResult + " HP";
+    };
     
     // const psi4 = document.getElementById('psi4');
     // const area4 = document.getElementById('area4');
@@ -271,11 +284,11 @@ function Formulas() {
                     <h6> 
                         Gpm = <br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="rpm" id="rpm2" value="" /> x
+                        <input type="number" placeholder="rpm" id="rpm2" onChange={getVariables}/> x
                         {/* style="width: 150px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Displacement (in³)" id="displacement2" value="" /> / 231
+                        <input type="number" placeholder="Displacement (in³)" id="displacement2" onChange={getVariables} /> / 231
                         
-                        <button className="equals" id="equals2">=</button>
+                        <button className="equals" id="equals2" onClick={equals2}>=</button>
                         <output type="number" id="gpmresult"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
@@ -283,11 +296,11 @@ function Formulas() {
                     <h6> 
                         Hyd HP = <br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm3" value="" /> x
+                        <input type="number" placeholder="gpm" id="gpm3" onChange={getVariables} /> x
                         {/* style="width: 120px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Pressure (psi)" id="psi3" value="" /> / 1,714
+                        <input type="number" placeholder="Pressure (psi)" id="psi3" onChange={getVariables} /> / 1,714
                         
-                        <button className="equals3" id="equals3">=</button>
+                        <button className="equals3" id="equals3" onClick={equals3}>=</button>
                         <output type="number" id="hydHPResult"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
@@ -295,9 +308,9 @@ function Formulas() {
                     <h6>
                         Torque (in lbs) = <br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Pressure (psi)" id="psi4" value="" /> x
+                        <input type="number" placeholder="Pressure (psi)" id="psi4" /> x
                           {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Area (in³)" id="area4" value="" /> / 6.28
+                        <input type="number" placeholder="Area (in³)" id="area4" /> / 6.28
                         <button className="equals4" id="equals4">=</button>
                         <output type="number" id="torqueResult4"></output> 
                     </h6>
@@ -306,9 +319,9 @@ function Formulas() {
                     <h6>
                         Torque (in lbs) = <br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="HP" id="hp5" value="" /> x 63,025 /  
+                        <input type="number" placeholder="HP" id="hp5" /> x 63,025 /  
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="rpm" id="rpm5" value="" /> 
+                        <input type="number" placeholder="rpm" id="rpm5" /> 
                         <button className="equals5" id="equals5">=</button>
                         <output type="number" id="torqueResult5"></output> 
                     </h6>
@@ -317,7 +330,7 @@ function Formulas() {
                     <h6>
                         Cylinder area (in²) = <br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Diameter (in)" id="dia6" value="" /> ² x .7854 
+                        <input type="number" placeholder="Diameter (in)" id="dia6" /> ² x .7854 
                         <button className="equals6" id="equals6">=</button>
                         <output type="number" id="output6"></output> 
                     </h6>
@@ -328,9 +341,9 @@ function Formulas() {
                     <h6>
                         EREA - Effected Rod End Area (in²) = <br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder=" Cyl. Dia. (in)" id="dia12" value="" /> ² x .7854 - 
+                        <input type="number" placeholder=" Cyl. Dia. (in)" id="dia12" /> ² x .7854 - 
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder=" Rod Dia. (in)" id="rod12" value="" /> ² x.7854 
+                        <input type="number" placeholder=" Rod Dia. (in)" id="rod12" /> ² x.7854 
                         <button className="equals12" id="equals12">=</button>
                         <output type="number" id="output12"></output> 
                     </h6>
@@ -339,11 +352,11 @@ function Formulas() {
                     <h6>
                         Cyl Time (seconds) =<br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Area (in²)" id="dia7" value="" /> x 
+                        <input type="number" placeholder="Area (in²)" id="dia7" /> x 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Stroke (in)" id="stroke7" value="" /> x .26 / 
+                        <input type="number" placeholder="Stroke (in)" id="stroke7" /> x .26 / 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm7" value="" /> 
+                        <input type="number" placeholder="gpm" id="gpm7" /> 
                         <button className="equals7" id="equals7">=</button>
                         <output type="number" id="output7"></output> 
                     </h6>
@@ -352,9 +365,9 @@ function Formulas() {
                     <h6>
                         Cyl HP =<br /> <br />
                         {/* style="width: 145px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Speed (ft/min)" id="cylSpeed8" value="" /> x 
+                        <input type="number" placeholder="Cyl. Speed (ft/min)" id="cylSpeed8" /> x 
                         {/* style="width: 125px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Force (lbs.)" id="cylForce8" value="" /> / 33,000 
+                        <input type="number" placeholder="Cyl. Force (lbs.)" id="cylForce8" /> / 33,000 
                         <button className="equals8" id="equals8">=</button>
                         <output type="number" id="output8"></output> 
                     </h6>
@@ -363,11 +376,11 @@ function Formulas() {
                     <h6>
                         Cyl Adj. gpm on retract =<br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Area (in²)" id="cylArea9" value="" /> x 
+                        <input type="number" placeholder="Cyl. Area (in²)" id="cylArea9" /> x 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm9" value="" /> / 
+                        <input type="number" placeholder="gpm" id="gpm9" /> / 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="EREA (in²)" id="erea9" value="" /> 
+                        <input type="number" placeholder="EREA (in²)" id="erea9" /> 
                         <button className="equals9" id="equals9">=</button>
                         <output type="number" id="output9"></output> 
                     </h6>
@@ -376,9 +389,9 @@ function Formulas() {
                     <h6>
                         Cyl Speed (ft/min) =<br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Stroke (in)" id="stroke10" value="" /> x 5 /
+                        <input type="number" placeholder="Stroke (in)" id="stroke10" /> x 5 /
                         {/* style="width: 125px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Time (seconds)" id="time10" value="" /> 
+                        <input type="number" placeholder="Time (seconds)" id="time10" /> 
                         <button className="equals10" id="equals10">=</button>
                         <output type="number" id="output10"></output> 
                     </h6>
@@ -387,9 +400,9 @@ function Formulas() {
                     <h6>
                         Cyl Speed (ft/min) =<br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm11" value="" /> x 19.25 / 
+                        <input type="number" placeholder="gpm" id="gpm11" /> x 19.25 / 
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Area (in²)" id="area11" value="" /> 
+                        <input type="number" placeholder="Cyl. Area (in²)" id="area11" /> 
                         <button className="equals11" id="equals11">=</button>
                         <output type="number" id="output11"></output> 
                     </h6>
