@@ -30,6 +30,10 @@ function Formulas() {
     // Cyl HP
     const [isCylSpeed8, setIsCylSpeed8] = useState();
     const [isCylForce8, setIsCylForce8] = useState();
+    // Cyl Adj. gpm on retract
+    const [isCylArea9, setIsCylArea9] = useState();
+    const [isGpm9, setIsGpm9] = useState();
+    const [isErea9, setIsErea9] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
@@ -97,6 +101,16 @@ function Formulas() {
                 break;
             case 'cylForce8':
                 setIsCylForce8(activeValue);
+                break;
+            // Cyl Adj. gpm on retract
+            case 'cylArea9':
+                setIsCylArea9(activeValue);
+                break;
+            case 'gpm9':
+                setIsGpm9(activeValue);
+                break;
+            case 'erea9':
+                setIsErea9(activeValue);
                 break;
             default:
                 console.log('Wrong elements to interact with.');
@@ -251,24 +265,21 @@ function Formulas() {
         output8.innerHTML = cylHp8Result + " HP";
     }
     
-    // const cylArea9 = document.getElementById('cylArea9');
-    // const gpm9 = document.getElementById('gpm9');
-    // const erea9 = document.getElementById('erea9');
-    // const equals9 = document.getElementById('equals9');
-    // const output9 = document.getElementById('output9');
+    // Cyl Adj. gpm on retract
+    const output9 = document.getElementById('output9');
     
-    // function cylRetract9 (cylArea9, gpm9, erea9) {
-    //     return cylArea9 * gpm9 / erea9 ;
-    // };
+    function cylRetract9 (cylArea9, gpm9, erea9) {
+        return cylArea9 * gpm9 / erea9 ;
+    };
     
-    // equals9.onclick= function () {
-    //     const cylArea9Value = Number (cylArea9.value);
-    //     const gpm9Value = Number (gpm9.value);
-    //     const erea9Value = Number (erea9.value);
-    //     const cylR9Result = cylRetract9 (cylArea9Value, gpm9Value, erea9Value);
+    const equals9 = () => {
+        const cylArea9Value = Number(isCylArea9);
+        const gpm9Value = Number(isGpm9);
+        const erea9Value = Number(isErea9);
+        const cylR9Result = cylRetract9(cylArea9Value, gpm9Value, erea9Value);
     
-    //     output9.innerHTML = cylR9Result + " gpm";
-    // };
+        output9.innerHTML = cylR9Result + " gpm";
+    };
     
     // const stroke10 = document.getElementById('stroke10');
     // const time10 = document.getElementById('time10');
@@ -420,12 +431,12 @@ function Formulas() {
                     <h6>
                         Cyl Adj. gpm on retract =<br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Area (in²)" id="cylArea9" /> x 
+                        <input type="number" placeholder="Cyl. Area (in²)" id="cylArea9" onChange={getVariables} /> x 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm9" /> / 
+                        <input type="number" placeholder="gpm" id="gpm9" onChange={getVariables} /> / 
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="EREA (in²)" id="erea9" /> 
-                        <button className="equals9" id="equals9">=</button>
+                        <input type="number" placeholder="EREA (in²)" id="erea9" onChange={getVariables} /> 
+                        <button className="equals9" id="equals9" onClick={equals9}>=</button>
                         <output type="number" id="output9"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
