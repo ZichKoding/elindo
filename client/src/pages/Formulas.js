@@ -34,6 +34,12 @@ function Formulas() {
     const [isCylArea9, setIsCylArea9] = useState();
     const [isGpm9, setIsGpm9] = useState();
     const [isErea9, setIsErea9] = useState();
+    // Cyl Speed (ft/min)
+    const [isStroke10, setIsStroke10] = useState();
+    const [isTime10, setIsTime10] = useState();
+    // Cyl Speed (ft/min)
+    const [isGpm11, setIsGpm11] = useState();
+    const [isArea11, setIsArea11] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
@@ -111,6 +117,20 @@ function Formulas() {
                 break;
             case 'erea9':
                 setIsErea9(activeValue);
+                break;
+            // Cyl Speed (ft/min)
+            case 'stroke10':
+                setIsStroke10(activeValue);
+                break;
+            case 'time10':
+                setIsTime10(activeValue);
+                break;
+            // Cyl Speed (ft/min)
+            case 'gpm11':
+                setIsGpm11(activeValue);
+                break;
+            case 'area11':
+                setIsArea11(activeValue);
                 break;
             default:
                 console.log('Wrong elements to interact with.');
@@ -281,37 +301,37 @@ function Formulas() {
         output9.innerHTML = cylR9Result + " gpm";
     };
     
-    // const stroke10 = document.getElementById('stroke10');
-    // const time10 = document.getElementById('time10');
-    // const c10 = 5;
+    // Cyl Speed (ft/min)
+    const output10 = document.getElementById('output10');
+    const c10 = 5;
     
-    // function cylSpeed10 (stroke10, time10) {
-    //     return stroke10 * c10 / time10 ;
-    // };
+    function cylSpeed10 (stroke10, time10) {
+        return stroke10 * c10 / time10 ;
+    };
     
-    // equals10.onclick= function () {
-    //     const stroke10Value = Number (stroke10.value);
-    //     const time10Value = Number (time10.value);
-    //     const cylSpeed10Result = cylSpeed10 (stroke10Value, time10Value);
+    const equals10 = () => {
+        const stroke10Value = Number(isStroke10);
+        const time10Value = Number(isTime10);
+        const cylSpeed10Result = cylSpeed10(stroke10Value, time10Value);
     
-    //     output10.innerHTML = cylSpeed10Result + " ft/min";
-    // };
+        output10.innerHTML = cylSpeed10Result + " ft/min";
+    };
     
-    // const gpm11 = document.getElementById('gpm11');
-    // const area11 = document.getElementById('area11');
-    // const c11 = 19.25;
+    // Cyl Speed (ft/min)
+    const output11 = document.getElementById('output11')
+    const c11 = 19.25;
     
-    // function cylSpeed11 (gpm11, area11) {
-    //     return gpm11 * c11 / area11 ;
-    // };
+    function cylSpeed11 (gpm11, area11) {
+        return gpm11 * c11 / area11 ;
+    };
     
-    // equals11.onclick= function () {
-    //     const gpm11Value = Number (gpm11.value);
-    //     const area11Value = Number (area11.value);
-    //     const cylSpeed11Result = cylSpeed11 (gpm11Value, area11Value);
+    const equals11 = () => {
+        const gpm11Value = Number (isGpm11);
+        const area11Value = Number (isArea11);
+        const cylSpeed11Result = cylSpeed11 (gpm11Value, area11Value);
     
-    //     output11.innerHTML = cylSpeed11Result + " ft/min";
-    // };
+        output11.innerHTML = cylSpeed11Result + " ft/min";
+    };
 
     return (
         <>
@@ -444,10 +464,10 @@ function Formulas() {
                     <h6>
                         Cyl Speed (ft/min) =<br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Stroke (in)" id="stroke10" /> x 5 /
+                        <input type="number" placeholder="Stroke (in)" id="stroke10" onChange={getVariables} /> x 5 /
                         {/* style="width: 125px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Time (seconds)" id="time10" /> 
-                        <button className="equals10" id="equals10">=</button>
+                        <input type="number" placeholder="Time (seconds)" id="time10" onChange={getVariables} /> 
+                        <button className="equals10" id="equals10" onClick={equals10}>=</button>
                         <output type="number" id="output10"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
@@ -455,10 +475,10 @@ function Formulas() {
                     <h6>
                         Cyl Speed (ft/min) =<br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="gpm" id="gpm11" /> x 19.25 / 
+                        <input type="number" placeholder="gpm" id="gpm11" onChange={getVariables} /> x 19.25 / 
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Area (in²)" id="area11" /> 
-                        <button className="equals11" id="equals11">=</button>
+                        <input type="number" placeholder="Cyl. Area (in²)" id="area11" onChange={getVariables} /> 
+                        <button className="equals11" id="equals11" onClick={equals11}>=</button>
                         <output type="number" id="output11"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
