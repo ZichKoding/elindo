@@ -18,6 +18,11 @@ function Formulas() {
     // state for Torque (in lbs)
     const [isHp5, setIsHp5] = useState();
     const [isRpm5, setIsRpm5] = useState();
+    // Cylinder area (in²)
+    const [isDia6, setIsDia6] = useState();
+    // EREA - Effected Rod End Area (in²) 
+    const [isDia12, setIsDia12] = useState();
+    const [isRod12, setIsRod12] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
@@ -57,6 +62,17 @@ function Formulas() {
                 break;
             case 'rpm5':
                 setIsRpm5(activeValue);
+                break;
+            // Cylinder area (in²)
+            case 'dia6':
+                setIsDia6(activeValue);
+                break;
+            // EREA - Effected Rod End Area (in²) 
+            case 'dia12':
+                setIsDia12(activeValue);
+                break;
+            case 'rod12':
+                setIsRod12(activeValue);
                 break;
             default:
                 console.log('Wrong elements to interact with.');
@@ -128,8 +144,6 @@ function Formulas() {
     };
     
     // Torque (in lbs)
-    // const rpm5 = document.getElementById('rpm5');
-    // const equals5 = document.getElementById('equals5');
     const torqueResult5 = document.getElementById('torqueResult5');
     const c5 = 63025;
     
@@ -145,42 +159,38 @@ function Formulas() {
         torqueResult5.innerHTML = torque5Result + " in lbs";
     };
     
-    
-    // const dia6 = document.getElementById('dia6');
-    // const equals6 = document.getElementById('equals6');
-    // const output6 = document.getElementById('output6');
-    // const c6 = .7854;
+    // Cylinder area (in²)
+    const output6 = document.getElementById('output6');
+    const c6 = .7854;
     
     
-    // function cylArea6 (dia6) {
-    //     return Math.pow(dia6,2) * c6;
-    // };
+    function cylArea6 (dia6) {
+        return Math.pow(dia6,2) * c6;
+    };
     
-    // equals6.onclick= function () {
-    //     const diaValue = Number (dia6.value);
-    //     const dia6Result = cylArea6 (diaValue);
+    const equals6 = () => {
+        const diaValue = Number (isDia6);
+        const dia6Result = cylArea6 (diaValue);
     
-    //     output6.innerHTML = dia6Result + " in²";
-    // };
+        output6.innerHTML = dia6Result + " in²";
+    };
     
-    // const dia12 = document.getElementById('dia12');
-    // const rod12 = document.getElementById('rod12');
-    // const equals12 = document.getElementById('equals12');
-    // const output12 = document.getElementById('output12');
-    // const c12 = .7854;
+    // EREA - Effected Rod End Area (in²) 
+    const output12 = document.getElementById('output12');
+    const c12 = .7854;
     
     
-    // function erea12 (dia12, rod12 ) {
-    //     return (Math.pow(dia12,2) * c12) - (Math.pow (rod12, 2) * c12);
-    // };
+    function erea12 (dia12, rod12 ) {
+        return (Math.pow(dia12,2) * c12) - (Math.pow (rod12, 2) * c12);
+    };
     
-    // equals12.onclick= function () {
-    //     const dia12Value = Number (dia12.value)
-    //     const rod12Value = Number (rod12.value)
-    //     const erea12Result = erea12 (dia12Value, rod12Value)
+    const equals12 = () => {
+        const dia12Value = Number(isDia12);
+        const rod12Value = Number(isRod12);
+        const erea12Result = erea12 (dia12Value, rod12Value)
     
-    //     output12.innerHTML = erea12Result + " in²";
-    // };
+        output12.innerHTML = erea12Result + " in²";
+    };
     
     
     // const area7 = document.getElementById('area7');
@@ -346,8 +356,8 @@ function Formulas() {
                     <h6>
                         Cylinder area (in²) = <br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Diameter (in)" id="dia6" /> ² x .7854 
-                        <button className="equals6" id="equals6">=</button>
+                        <input type="number" placeholder="Diameter (in)" id="dia6" onChange={getVariables} /> ² x .7854 
+                        <button className="equals6" id="equals6" onClick={equals6}>=</button>
                         <output type="number" id="output6"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
@@ -357,10 +367,10 @@ function Formulas() {
                     <h6>
                         EREA - Effected Rod End Area (in²) = <br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder=" Cyl. Dia. (in)" id="dia12" /> ² x .7854 - 
+                        <input type="number" placeholder=" Cyl. Dia. (in)" id="dia12" onChange={getVariables} /> ² x .7854 - 
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder=" Rod Dia. (in)" id="rod12" /> ² x.7854 
-                        <button className="equals12" id="equals12">=</button>
+                        <input type="number" placeholder=" Rod Dia. (in)" id="rod12" onChange={getVariables} /> ² x.7854 
+                        <button className="equals12" id="equals12" onClick={equals12}>=</button>
                         <output type="number" id="output12"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
