@@ -1,45 +1,21 @@
 import React from "react";
 import gsap from "gsap";
-import { useEffect, useState } from 'react';
  
 function Interactive() {
-    const [isBtnOneDisabled, setIsBtnOneDisabled] = useState(false);
-    const [isBtnTwoDisabled, setIsBtnTwoDisabled] = useState(false);
-    
-    // <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-
-    //     <script>
-    //       console.clear();
-
-        //   let btna = document.querySelector("#A");
-        //   let btnb = document.querySelector("#B");
-        //   let btnstart = document.querySelector("#Start");
-        //   let btnstop = document.querySelector("#Stop");
     let animation;
     let isButtonADisabled = true;
     let isButtonBDisabled = true;
-
-    useEffect(() => {
-        setIsBtnOneDisabled(isButtonADisabled);
-        setIsBtnTwoDisabled(isButtonBDisabled);
-
-        console.log(isBtnOneDisabled);
-
-        // setIsBtnOneDisabled(true);
-        // setIsBtnTwoDisabled(true);
-    }, [isButtonADisabled]);
-    
 
     gsap.set("#A1, #A2, #B1, #B2, #P, #Solb, #Sola", { opacity: 0 });
     gsap.set("#A, #B, #Stop, #Start", { opacity: 0.7 });
 
     function stagea1() {
         let extenda1 = gsap.timeline({ defaults: { ease: "none" } }),
-            speed = 40;
+        speed = 40;
         extenda1
             .to("#Rod", {
-            x: 200,
-            duration: Math.abs(200 - gsap.getProperty("#Rod", "x")) / speed,
+                x: 200,
+                duration: Math.abs(200 - gsap.getProperty("#Rod", "x")) / speed,
             })
             .to("#Start, #A", { opacity: 1 }, "<")
             .to("#Stop, #B", { opacity: 0.7 }, "<")
@@ -61,7 +37,7 @@ function Interactive() {
 
     function stagea2() {
         let extenda2 = gsap.timeline({ defaults: { ease: "none" } }),
-            speed = 40;
+        speed = 40;
         extenda2
             .to("#P, #B1, #B2, #A1, #solb", { opacity: 0 })
             .to("#Start, #A", { opacity: 1 }, "<")
@@ -80,7 +56,7 @@ function Interactive() {
 
     function stageb1() {
         let retractb1 = gsap.timeline({ defaults: { ease: "none" } }),
-            speed = 50;
+        speed = 50;
         retractb1
             .to("#Rod", {
             x: 0,
@@ -107,7 +83,7 @@ function Interactive() {
 
     function stageb2() {
         let retractb2 = gsap.timeline({ defaults: { ease: "none" } }),
-            speed = 50;
+        speed = 50;
         retractb2
             .to("#P, #A1, #A2, #B1, #Sola", { opacity: 0 })
             .to("#B2", { opacity: 1, duration: 1, ease: "none" }, "<")
@@ -154,7 +130,7 @@ function Interactive() {
         if (gsap.getProperty("#Rod", "x") < 200) {
             if (animation) animation.kill();
             animation = stagea1();
-        } else if (gsap.getProperty("#Rod", "x") == 200) {
+        } else if (gsap.getProperty("#Rod", "x")===200) {
             if (animation) animation.kill();
             animation = stagea2();
         }
@@ -165,7 +141,7 @@ function Interactive() {
         if (gsap.getProperty("#Rod", "x") > 0) {
             if (animation) animation.kill();
             animation = stageb1();
-        } else if (gsap.getProperty("#Rod", "x") == 0) {
+        } else if (gsap.getProperty("#Rod", "x")===0) {
             if (animation) animation.kill();
             animation = stageb2();
         }
@@ -181,11 +157,11 @@ function Interactive() {
     let btnstart = () => {
         isButtonBDisabled = false;
         isButtonADisabled = false;
+
         if (!animation || animation.isActive() === false) {
             animation = stagestart();
         }
     };
-    //     </script>
 
     return (
         <>
@@ -897,7 +873,7 @@ function Interactive() {
                             ></polygon>
                         </g>
                         
-                        <g id="Stop" onClick={btnstop()}>
+                        <g id="Stop" onClick={btnstop}>
                             <rect
                                 x="804.1"
                                 y="843.5"
@@ -922,7 +898,7 @@ function Interactive() {
                             ></rect>
                         </g>
                         
-                        <g id="Start" onClick={btnstart()}>
+                        <g id="Start" onClick={btnstart}>
                             <rect
                                 x="804.4"
                                 y="747.7"
@@ -944,7 +920,7 @@ function Interactive() {
                             ></rect>
                         </g>
                         
-                        <g id="B" onClick={btnb()}>
+                        <g id="B" onClick={btnb}>
                             <rect
                                 x="1021.3"
                                 y="844.4"
@@ -969,7 +945,7 @@ function Interactive() {
                             ></rect>
                         </g>
                         
-                        <g id="A" oncClick={btna()}>
+                        <g id="A" onClick={btna}>
                             <rect
                                 x="1021.3"
                                 y="744.4"
