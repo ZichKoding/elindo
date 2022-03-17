@@ -27,6 +27,9 @@ function Formulas() {
     const [isArea7, setIsArea7] = useState();
     const [isStroke7, setIsStroke7] = useState();
     const [isGpm7, setIsGpm7] = useState();
+    // Cyl HP
+    const [isCylSpeed8, setIsCylSpeed8] = useState();
+    const [isCylForce8, setIsCylForce8] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
@@ -88,7 +91,13 @@ function Formulas() {
             case 'gpm7':
                 setIsGpm7(activeValue);
                 break;
-            
+            // Cyl HP
+            case 'cylSpeed8':
+                setIsCylSpeed8(activeValue);
+                break;
+            case 'cylForce8':
+                setIsCylForce8(activeValue);
+                break;
             default:
                 console.log('Wrong elements to interact with.');
         }
@@ -225,24 +234,22 @@ function Formulas() {
         output7.innerHTML = cylTime7Result + " Seconds";
     };
     
-    // const cylSpeed8 = document.getElementById('cylSpeed8');
-    // const cylForce8 = document.getElementById('cylForce8');
-    // const equals8 = document.getElementById('equals8');
-    // const output8 = document.getElementById('output8');
-    // const c8 = 33000
+    // Cyl HP
+    const output8 = document.getElementById('output8');
+    const c8 = 33000
     
     
-    // function cylHp8 (cylSpeed8, cylForce8) {
-    //     return cylSpeed8 * cylForce8 / c8 ;
-    // };
+    function cylHp8 (cylSpeed8, cylForce8) {
+        return cylSpeed8 * cylForce8 / c8 ;
+    };
     
-    // equals8.onclick= function () {
-    //     const cylSpeedValue = Number (cylSpeed8.value);
-    //     const cylForceValue = Number (cylForce8.value);
-    //     const cylHp8Result = cylHp8 (cylSpeedValue, cylForceValue);
+    const equals8 = () => {
+        const cylSpeedValue = Number(isCylSpeed8);
+        const cylForceValue = Number(isCylForce8);
+        const cylHp8Result = cylHp8(cylSpeedValue, cylForceValue);
     
-    //     output8.innerHTML = cylHp8Result + " HP";
-    // }
+        output8.innerHTML = cylHp8Result + " HP";
+    }
     
     // const cylArea9 = document.getElementById('cylArea9');
     // const gpm9 = document.getElementById('gpm9');
@@ -402,10 +409,10 @@ function Formulas() {
                     <h6>
                         Cyl HP =<br /> <br />
                         {/* style="width: 145px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Speed (ft/min)" id="cylSpeed8" /> x 
+                        <input type="number" placeholder="Cyl. Speed (ft/min)" id="cylSpeed8" onChange={getVariables} /> x 
                         {/* style="width: 125px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Cyl. Force (lbs.)" id="cylForce8" /> / 33,000 
-                        <button className="equals8" id="equals8">=</button>
+                        <input type="number" placeholder="Cyl. Force (lbs.)" id="cylForce8" onChange={getVariables} /> / 33,000 
+                        <button className="equals8" id="equals8" onClick={equals8}>=</button>
                         <output type="number" id="output8"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
