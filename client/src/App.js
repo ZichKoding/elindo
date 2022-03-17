@@ -5,7 +5,7 @@ import {
   Routes 
 } from 'react-router-dom';
 
-import Nav from './components/Nav';
+import TuBizNav from './components/Nav';
 import Footer from './components/Footer';
 
 import Homepage from './pages/Homepage';
@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <Router>
         <header className="App-header">
-          <Nav />
+          <TuBizNav />
         </header>
 
         <Routes>
