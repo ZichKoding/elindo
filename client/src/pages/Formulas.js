@@ -12,6 +12,12 @@ function Formulas() {
     // state for Hyd HP
     const [isGpm3, setIsGpm3] = useState();
     const [isPsi3, setIsPsi3] = useState();
+    // state for Torque (in lbs)
+    const [isPsi4, setIsPsi4] = useState();
+    const [isArea4, setIsArea4] = useState();
+    // state for Torque (in lbs)
+    const [isHp5, setIsHp5] = useState();
+    const [isRpm5, setIsRpm5] = useState();
 
     const  getVariables = () => {
         let activeId = document.activeElement.id;
@@ -37,6 +43,20 @@ function Formulas() {
                 break;
             case 'psi3':
                 setIsPsi3(activeValue);
+                break;
+            // Torque (in lbs)
+            case 'psi4':
+                setIsPsi4(activeValue);
+                break;
+            case 'area4':
+                setIsArea4(activeValue);
+                break;
+            // Torque (in lbs)
+            case 'hp5':
+                setIsHp5(activeValue);
+                break;
+            case 'rpm5':
+                setIsRpm5(activeValue);
                 break;
             default:
                 console.log('Wrong elements to interact with.');
@@ -76,8 +96,6 @@ function Formulas() {
     };
     
     // Hyd HP
-    const psi3 = document.getElementById('psi3');
-    // const equals3 = document.getElementById('equals3');
     const hydHPResult = document.getElementById('hydHPResult');
     const c3 = 1714;
     
@@ -93,41 +111,39 @@ function Formulas() {
         hydHPResult.innerHTML = hpResult + " HP";
     };
     
-    // const psi4 = document.getElementById('psi4');
-    // const area4 = document.getElementById('area4');
-    // const equals4 = document.getElementById('equals4');
-    // const torqueResult4 = document.getElementById('torqueResult4');
-    // const c4 = 6.28;
+    // Torque (in lbs)
+    const torqueResult4 = document.getElementById('torqueResult4');
+    const c4 = 6.28;
     
-    // function torque4 (psi4, area4) {
-    //     return psi4 * area4 / c4;
-    // };
+    function torque4 (psi4, area4) {
+        return psi4 * area4 / c4;
+    };
     
-    // equals4.onclick = function () {
-    //     const psiValue = Number(psi4.value);
-    //     const areaValue = Number(area4.value);
-    //     const torque4Result = torque4 (areaValue, psiValue);
+    const equals4 = () => {
+        const psiValue = Number(isPsi4);
+        const areaValue = Number(isArea4);
+        const torque4Result = torque4 (areaValue, psiValue);
     
-    //     torqueResult4.innerHTML = torque4Result + " in lbs";
-    // };
+        torqueResult4.innerHTML = torque4Result + " in lbs";
+    };
     
-    // const hp5 = document.getElementById('hp5');
+    // Torque (in lbs)
     // const rpm5 = document.getElementById('rpm5');
     // const equals5 = document.getElementById('equals5');
-    // const torqueResult5 = document.getElementById('torqueResult5');
-    // const c5 = 63025;
+    const torqueResult5 = document.getElementById('torqueResult5');
+    const c5 = 63025;
     
-    // function torque5 (hp5, rpm5) {
-    //     return (hp5* c5)/ rpm5 ;
-    // };
+    function torque5 (hp5, rpm5) {
+        return (hp5* c5)/ rpm5 ;
+    };
     
-    // equals5.onclick= function () {
-    //     const hpValue = Number (hp5.value);
-    //     const rpmValue = Number(rpm5.value);
-    //     const torque5Result = torque5 (hpValue, rpmValue);
+    const equals5 = () => {
+        const hpValue = Number(isHp5);
+        const rpmValue = Number(isRpm5);
+        const torque5Result = torque5 (hpValue, rpmValue);
     
-    //     torqueResult5.innerHTML = torque5Result + " in lbs";
-    // };
+        torqueResult5.innerHTML = torque5Result + " in lbs";
+    };
     
     
     // const dia6 = document.getElementById('dia6');
@@ -308,10 +324,10 @@ function Formulas() {
                     <h6>
                         Torque (in lbs) = <br /> <br />
                         {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Pressure (psi)" id="psi4" /> x
+                        <input type="number" placeholder="Pressure (psi)" id="psi4" onChange={getVariables} /> x
                           {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="Area (in³)" id="area4" /> / 6.28
-                        <button className="equals4" id="equals4">=</button>
+                        <input type="number" placeholder="Area (in³)" id="area4" onChange={getVariables} /> / 6.28
+                        <button className="equals4" id="equals4" onClick={equals4}>=</button>
                         <output type="number" id="torqueResult4"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
@@ -319,10 +335,10 @@ function Formulas() {
                     <h6>
                         Torque (in lbs) = <br /> <br />
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="HP" id="hp5" /> x 63,025 /  
+                        <input type="number" placeholder="HP" id="hp5" onChange={getVariables} /> x 63,025 /  
                         {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
-                        <input type="number" placeholder="rpm" id="rpm5" /> 
-                        <button className="equals5" id="equals5">=</button>
+                        <input type="number" placeholder="rpm" id="rpm5" onChange={getVariables} /> 
+                        <button className="equals5" id="equals5" onClick={equals5}>=</button>
                         <output type="number" id="torqueResult5"></output> 
                     </h6>
                     <br /> <hr className="linebreak" />
