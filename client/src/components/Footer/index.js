@@ -22,7 +22,7 @@ function Footer() {
             <div className="row">
                 <footer className="main-footer">
                 <p className="copyright">
-                    © {fullYear} Copyright Technical Union <br />&nbsp;&nbsp; | Developed by
+                    © {fullYear()} Copyright Technical Union <br />&nbsp;&nbsp; | Developed by
                     Edgar Lindo & <b>
                         <a 
                             href='https://zichkoding.github.io' 
