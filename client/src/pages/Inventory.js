@@ -172,11 +172,22 @@ function Inventory() {
         } else {
             for (let i = 0; i <= savedParts.length; i++) {
                 if(savedParts[i]) {
+                    // searching reference number
                     let refSearch = savedParts[i].reference;
                     refSearch = refSearch.toString(refSearch);
                     refSearch = refSearch.toLowerCase(refSearch);
 
-                    if (refSearch.match(searching)) {
+                    // searching reference number
+                    let descSearch = savedParts[i].description;
+                    descSearch = descSearch.toString(descSearch);
+                    descSearch = descSearch.toLowerCase(descSearch);
+                    
+                    // searching reference number
+                    let replSearch = savedParts[i].replacements;
+                    replSearch = replSearch.toString(replSearch);
+                    replSearch = replSearch.toLowerCase(replSearch);
+
+                    if (refSearch.match(searching) || descSearch.match(searching) || replSearch.match(searching)) {
                         activeInventory.push(
                             <tr key={`tr${i}`}>
                                 <td key={`ref${i}`}>
