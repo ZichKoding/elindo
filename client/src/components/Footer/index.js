@@ -10,7 +10,7 @@ function Footer() {
 
     return (
         <>
-            <div className="row">
+            {/* <div className="row">
                 <div className="main-footer2">
                     <h6 className="banner-text">
                         Technical Union | Industrial Exports | Pumps | Motors | Valves |
@@ -18,7 +18,7 @@ function Footer() {
                         Accumulators | Oil Analysis | General Industrial Supplies..
                     </h6>
                 </div>
-            </div>
+            </div> */}
             <div className="row">
                 <footer className="main-footer">
                 <p className="copyright">

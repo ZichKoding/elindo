@@ -18,73 +18,76 @@ function Manifolds() {
                     <br /> <br />
                         
                     <table className="table table-hover table-striped table-bordered">
-                        <tr>
-                            <thead />
-                            <th colspan="4" className="product-title-table-text"> Hydraulic Manifolds </th>
-                        </tr>
-          
-                        <tr className="inside-table-text">
-                            <td>Size</td>
-                            <td>PSI</td>
-                            <td>Material</td>
-                            <td> Stations</td>
-                        </tr>
-           
-                        <tr className="inside-table-text">
-                            <td>D03</td>
-                            <td>3,000</td>
-                            <td>Aluminum</td>
-                            <td>1-16</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th colspan="4" className="product-title-table-text"> Hydraulic Manifolds </th>
+                            </tr>
+            
+                            <tr className="inside-table-text">
+                                <td>Size</td>
+                                <td>PSI</td>
+                                <td>Material</td>
+                                <td> Stations</td>
+                            </tr>
+                        </thead>
 
-                        <tr className="inside-table-text">
-                            <td>D03</td>
-                            <td>5,000</td>
-                            <td>Ductile Iron</td>
-                            <td>1-16</td>
-                        </tr>
+                        <tbody>
+                            <tr className="inside-table-text">
+                                <td>D03</td>
+                                <td>3,000</td>
+                                <td>Aluminum</td>
+                                <td>1-16</td>
+                            </tr>
 
-                        <tr className="inside-table-text">
-                            <td>D05</td>
-                            <td>3,000</td>
-                            <td>Aluminum</td>
-                            <td>1-21</td>
-                        </tr>
+                            <tr className="inside-table-text">
+                                <td>D03</td>
+                                <td>5,000</td>
+                                <td>Ductile Iron</td>
+                                <td>1-16</td>
+                            </tr>
 
-                        <tr className="inside-table-text">
-                            <td>D05</td>
-                            <td>5,000</td>
-                            <td>Ductile Iron</td>
-                            <td>1-21</td>
-                        </tr>
+                            <tr className="inside-table-text">
+                                <td>D05</td>
+                                <td>3,000</td>
+                                <td>Aluminum</td>
+                                <td>1-21</td>
+                            </tr>
 
-                        <tr className="inside-table-text">
-                            <td>D07</td>
-                            <td>3,000</td>
-                            <td>Aluminum</td>
-                            <td>1-8</td>
-                        </tr>
+                            <tr className="inside-table-text">
+                                <td>D05</td>
+                                <td>5,000</td>
+                                <td>Ductile Iron</td>
+                                <td>1-21</td>
+                            </tr>
 
-                        <tr className="inside-table-text">
-                            <td>D07</td>
-                            <td>5,000</td>
-                            <td>Ductile Iron</td>
-                            <td>1-8</td>
-                        </tr>
+                            <tr className="inside-table-text">
+                                <td>D07</td>
+                                <td>3,000</td>
+                                <td>Aluminum</td>
+                                <td>1-8</td>
+                            </tr>
 
-                        <tr className="inside-table-text">
-                            <td>D08</td>
-                            <td>3,000</td>
-                            <td>Aluminum</td>
-                            <td>1-7</td>
-                        </tr>
+                            <tr className="inside-table-text">
+                                <td>D07</td>
+                                <td>5,000</td>
+                                <td>Ductile Iron</td>
+                                <td>1-8</td>
+                            </tr>
 
-                        <tr className="inside-table-text">
-                            <td>D08</td>
-                            <td>5,000</td>
-                            <td>Ductile Iron</td>
-                            <td>1-7</td>
-                        </tr>
+                            <tr className="inside-table-text">
+                                <td>D08</td>
+                                <td>3,000</td>
+                                <td>Aluminum</td>
+                                <td>1-7</td>
+                            </tr>
+
+                            <tr className="inside-table-text">
+                                <td>D08</td>
+                                <td>5,000</td>
+                                <td>Ductile Iron</td>
+                                <td>1-7</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <br />
                 </div>

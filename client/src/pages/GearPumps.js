@@ -14,54 +14,57 @@ function GearPumps() {
                         <a href={require("../assets/pdf files/hydraulic-gear-pumps-catalog.pdf")} className="btn btn-info">Download PDF</a> <br /> <br />
 
                         <table className= "table table-hover table-striped table-bordered">
-                            <tr>
-                                <thead />
-                                <th colspan="5" className="gear-pump-table-title">Gear Pump Range</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th colspan="5" className="gear-pump-table-title">Gear Pump Range</th>
+                                </tr>
 
-                            <tr className="inside-table-text">
-                                <td>Style</td>
-                                <td>SAE Mount</td>
-                                <td>Displacement cu/in²</td>
-                                <td>  * PSI</td>
-                                <td> * RPM</td>
-                            </tr>
+                                <tr className="inside-table-text">
+                                    <td>Style</td>
+                                    <td>SAE Mount</td>
+                                    <td>Displacement cu/in²</td>
+                                    <td>  * PSI</td>
+                                    <td> * RPM</td>
+                                </tr>
+                            </thead>
                             
-                            <tr className="inside-table-text">
-                                <td>Single</td>
-                                <td>AA</td>
-                                <td> 0.04 - 0.82</td>
-                                <td>3,000</td>
-                                <td>4,000</td>
-                            </tr>
+                            <tbody>
+                                <tr className="inside-table-text">
+                                    <td>Single</td>
+                                    <td>AA</td>
+                                    <td> 0.04 - 0.82</td>
+                                    <td>3,000</td>
+                                    <td>4,000</td>
+                                </tr>
 
-                            <tr className="inside-table-text">
-                                <td>Single</td>
-                                <td>A</td>
-                                <td>0.24- 2.02</td>
-                                <td>3,500</td>
-                                <td>4,000</td>
-                            </tr>
+                                <tr className="inside-table-text">
+                                    <td>Single</td>
+                                    <td>A</td>
+                                    <td>0.24- 2.02</td>
+                                    <td>3,500</td>
+                                    <td>4,000</td>
+                                </tr>
 
-                            <tr className="inside-table-text">
-                                <td>Double</td>
-                                <td>A</td>
-                                <td> 0.30-0.30 / 1.31-1.31 </td>
-                                <td>3,000</td>
-                                <td>3,500</td>
-                            </tr>
+                                <tr className="inside-table-text">
+                                    <td>Double</td>
+                                    <td>A</td>
+                                    <td> 0.30-0.30 / 1.31-1.31 </td>
+                                    <td>3,000</td>
+                                    <td>3,500</td>
+                                </tr>
 
-                            <tr className="inside-table-text">
-                                <td>Single</td>
-                                <td>B</td>
-                                <td> 1.40 - 5.49</td>
-                                <td>3,500</td>
-                                <td>3,000</td>
-                            </tr>
+                                <tr className="inside-table-text">
+                                    <td>Single</td>
+                                    <td>B</td>
+                                    <td> 1.40 - 5.49</td>
+                                    <td>3,500</td>
+                                    <td>3,000</td>
+                                </tr>
 
-                            <tr>
-                                <td colspan= "5"> * RPM / PSI may vary depending on pump size range </td>
-                            </tr>
+                                <tr>
+                                    <td colspan= "5"> * RPM / PSI may vary depending on pump size range </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -72,48 +75,51 @@ function GearPumps() {
                         <a href={require("../assets/pdf files/dump-pumps.pdf")} className="btn btn-info">Download PDF</a> <br /> <br />
 
                         <table className= "table table-hover table-striped table-bordered">
-                            <tr>
-                                <thead />
-                                <th colspan="5" className="gear-pump-table-title"> Dump Pump Range</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th colspan="5" className="gear-pump-table-title"> Dump Pump Range</th>
+                                </tr>
 
-                            <tr className="inside-table-text">
-                                <td>Model</td>
-                                <td>Max. psi</td>
-                                <td colspan="2" >GPM at 1,800 RPM</td>
-                                <td>Max. rpm</td>
-                            </tr>
+                                <tr className="inside-table-text">
+                                    <td>Model</td>
+                                    <td>Max. psi</td>
+                                    <td colspan="2" >GPM at 1,800 RPM</td>
+                                    <td>Max. rpm</td>
+                                </tr>
+                            </thead>
                 
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td colspan="2" className="inside-table-text">Size</td>
-                                <td></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td colspan="2" className="inside-table-text">Size</td>
+                                    <td></td>
+                                </tr>
 
-                            <tr className="inside-table-text" >
-                                <td></td>
-                                <td></td>
-                                <td>2"</td>
-                                <td>2.5"</td>
-                                <td></td>
-                            </tr>
+                                <tr className="inside-table-text" >
+                                    <td></td>
+                                    <td></td>
+                                    <td>2"</td>
+                                    <td>2.5"</td>
+                                    <td></td>
+                                </tr>
 
-                            <tr className="inside-table-text">
-                                <td>C101</td>
-                                <td>2,500</td>
-                                <td>39</td>
-                                <td>48</td>
-                                <td>2,400</td>
-                            </tr>
+                                <tr className="inside-table-text">
+                                    <td>C101</td>
+                                    <td>2,500</td>
+                                    <td>39</td>
+                                    <td>48</td>
+                                    <td>2,400</td>
+                                </tr>
 
-                            <tr className="inside-table-text" >
-                                <td>C102</td>
-                                <td>2,500</td>
-                                <td>39</td>
-                                <td>48</td>
-                                <td>2,400</td>
-                            </tr>
+                                <tr className="inside-table-text" >
+                                    <td>C102</td>
+                                    <td>2,500</td>
+                                    <td>39</td>
+                                    <td>48</td>
+                                    <td>2,400</td>
+                                </tr>
+                            </tbody>
                         </table>
                         <br /> <br />
                     </div>
