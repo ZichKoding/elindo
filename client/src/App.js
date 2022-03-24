@@ -27,6 +27,7 @@ import Inventory from './pages/Inventory';
 import Formulas from './pages/Formulas';
 import Interactive from './pages/Interactive';
 import ContactUs from './pages/ContactUs';
+import Thanks from './pages/ThankYou';
 
 function App() {
   return (
@@ -67,6 +68,9 @@ function App() {
 
           {/* Contact Us */}
           <Route path="/ContactUs" element={<ContactUs />} />
+
+          {/* Thank you page */}
+          <Route path="/ThankYou" element={<Thanks />} />
           
         </Routes>
 
