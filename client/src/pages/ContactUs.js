@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ContactUs() {
     return (
@@ -35,7 +36,7 @@ function ContactUs() {
                         <input
                             type="hidden"
                             name="_next"
-                            value="http://www.tu.biz/thankyou.html"
+                            // value="http://www.tu.biz/thankyou.html"
                         />
 
                         <label for="firstname" className="form-label">* Name: </label>
@@ -97,12 +98,14 @@ function ContactUs() {
 
                         <input className="contact-your-message-input" type="text" name="_honey" />
                         <br />
-                        <input
-                            type="submit"
-                            name="submit"
-                            value="Submit"
-                            className="btn btn-primary"
-                        />
+                        <Link to="/ThankYou">
+                            <input
+                                type="submit"
+                                name="submit"
+                                value="Submit"
+                                className="btn btn-primary"
+                            />
+                        </Link>
                     </form>
                 </div>
 
