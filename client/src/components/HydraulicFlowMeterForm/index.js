@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HydraulicFlowMeterForm() {
     return (
@@ -17,13 +18,6 @@ function HydraulicFlowMeterForm() {
                     method="post"
                     enctype="multipart/form-data"
                 >
-            
-                    <input
-                        type="hidden"
-                        name="_next"
-                        value="http://www.tu.biz/thankyou.html"
-                    />
-              
                     <h6> 
                         <u> 
                             Flowmeter info: 
@@ -82,8 +76,9 @@ function HydraulicFlowMeterForm() {
                     
                     <input className="form-display-none" type="text" name="_honey" />
                       
-                    <input type="submit" name= "submit" value="Submit" />
-                      
+                    <Link to="/ThankYou">
+                        <input type="submit" name= "submit" value="Submit" />
+                    </Link>
                 </form>
             </div>
         </>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function HydraulicPumpForm() {
     function singlePumpf() {
@@ -9,27 +10,28 @@ function HydraulicPumpForm() {
         if (document.getElementById("p1fixedselect").checked) {
             document.getElementById("p1controlselect").style.display = "none";
         }
-    }
+    };
 
     function doublePumpf() {
         if (document.getElementById("pump2").checked) {
             document.getElementById("fieldsetpump2").style.display = "block";
             document.getElementById("fieldsetpump3").style.display = "none";
         }
-    }
+    };
 
     function triplePumpf() {
         if (document.getElementById("pump3").checked) {
             document.getElementById("fieldsetpump2").style.display = "block";
             document.getElementById("fieldsetpump3").style.display = "block";
         }
-    }
+    };
 
+    // The function below I need to know where it belongs to. p1variableselect is only found here.
     function p1Controlf() {
         if (document.getElmentById("p1variableselect").checked) {
             document.getElementById("p1controlselect").style.display = "block";
         }
-    }
+    };
 
 
     return (
@@ -48,24 +50,19 @@ function HydraulicPumpForm() {
                     method="post"
                     enctype="multipart/form-data"
                 >
-                    <input
-                        type="hidden"
-                        name="_next"
-                        value="http://www.tu.biz/thankyou.html"    // REMEMBER THIS VALUE MIGHT NEED TO CHANGE 
-                    />
                     <h5> 
                         * Select one checkbox
                     </h5>
 
                     {/* <input type="radio" name="pumpselect" id= pump1 value="singlePump" onclick = "singlePumpf()" checked /> */}
-                    <input type="radio" name="pumpselect" id="pump1" value="singlePump" onclick={singlePumpf} checked />
+                    <input type="radio" name="pumpselect" id="pump1" value="singlePump" onClick={singlePumpf} />
                     <label for="pump1"> Single Pump</label>
                     <br />
     
-                    <input type="radio" name="pumpselect" id="pump2" value="doublePump" onclick={doublePumpf} />
+                    <input type="radio" name="pumpselect" id="pump2" value="doublePump" onClick={doublePumpf} />
                     <label for="pump2"> Double Pump</label><br />
                     
-                    <input type="radio" name="pumpselect" id="pump3" value="Triplepump" onclick={triplePumpf} />
+                    <input type="radio" name="pumpselect" id="pump3" value="Triplepump" onClick={triplePumpf} />
                     <label for="pump3"> Triple Pump</label><br /><br />
                     
                     
@@ -212,7 +209,9 @@ function HydraulicPumpForm() {
                         
                         <input className="form-display-none" type="text" name="_honey" />
                         <br /><br />
-                        <input type="submit" name= "submit" value="Submit" />
+                        <Link to="/ThankYou">
+                            <input type="submit" name= "submit" value="Submit" />
+                        </Link>
                     </fieldset>
                 </form>
             </div>

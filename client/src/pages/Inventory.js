@@ -213,7 +213,7 @@ function Inventory() {
         <>
             <div className="col-md-12">
                 {/* style="margin-top: 50px; margin-bottom: 20px" ADD CSS TO ELEMENT BELOW */}
-                <p>
+                <p className="invy-text">
                     Here is a quick overview of regular components coming from our
                     inventory. If you have any requirements on these components you can
                     always <Link to="/ContactUs"> contact us </Link> for a quote request.
