@@ -25,13 +25,13 @@ function HydraulicFlowMeterForm() {
                     </h6>
                     
                     <label className="flowmeter-form-labels form-label-style" for="torque"> GPM: </label>
-                    <input type="number" id="torque" placeholder="gpm" required /><br />
+                    <input type="number" id="torque" className="input-fields" placeholder="gpm" required /><br />
                     
                     <label className="flowmeter-form-labels form-label-style" for="pressure"> Pressure (psi):</label>
-                    <input type="number" id="pressure" name="pressure" placeholder = "Max Cont. pressure" required /> <br />
+                    <input type="number" id="pressure" className="input-fields" name="pressure" placeholder = "Max Cont. pressure" required /> <br />
                     
                     <label className="flowmeter-form-labels" for="rpm">Type of fluid </label>
-                    <input placeholder = "Fluid used" required /><br /> <br />
+                    <input placeholder="Fluid used" required /><br /> <br />
 
                     <h6>
                         * Flow Direction Options
@@ -59,16 +59,16 @@ function HydraulicFlowMeterForm() {
                     
                     
                     <label className="flowmeter-labels-final" for="firstname" >* First Name: </label> 
-                    <input type="text" id="firstname" name="firstname" placeholder = " First Name" required /> <br />
+                    <input type="text" id="firstname" className="input-fields" name="firstname" placeholder = " First Name" required /> <br />
                     
                     <label className="flowmeter-labels-final" for="lastname">* Last Name: </label>
-                    <input type="text" id="lastname" name="firstname" placeholder = "Last Name" required /> <br />
+                    <input type="text" id="lastname" className="input-fields" name="firstname" placeholder = "Last Name" required /> <br />
                     
-                    <label  className="flowmeter-labels-final" for="company"> Company: </label>
-                    <input type="text" id="company" name="company" placeholder = "Your company" /> <br />
+                    <label  className="flowmeter-labels-final" for="company">* Company: </label>
+                    <input type="text" id="company" className="input-fields" name="company" placeholder = "Your company" /> <br />
                     
                     <label className="flowmeter-labels-final" for="email"> * E-mail: </label>
-                    <input type="email" id="email" name="email" placeholder = "Your E-mail" required /> <br />
+                    <input type="email" id="email" className="input-fields" name="email" placeholder = "Your E-mail" required /> <br />
                     
                     <label className="form-display-block" for="notes"> Notes: </label>
                     
