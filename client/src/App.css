@@ -29,7 +29,7 @@
   padding-right: 1.7em;
   padding-bottom: 1em;
   height: auto;
-  max-width: 110px !important;
+  /* max-width: 110px !important; */
 }
 .main-footer2 {
   background-color: black;
