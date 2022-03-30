@@ -509,3 +509,135 @@
   margin-bottom: 20px
 }
 /* Inventory End */
+
+/* Formula beginning */
+/* Force (lbs) = */
+#pressure1 {
+  width: 120px;
+}
+#area1 {
+  width: 99px;
+  margin: 0px 5px;
+}
+
+/* Gpm =  */
+#rpm2 {
+  width: 99px;
+}
+#displacement2 {
+  width: 150px;
+  margin-left: 5px;
+}
+#equals2 {
+  margin-left: 5px;
+}
+
+/* Hyd HP =  */
+#gpm3 {
+  width: 99px;
+}
+#psi3 {
+  width: 120px;
+  margin-left: 5px;
+}
+#equals3 {
+  margin-left: 5px;
+}
+
+/* Torque (in lbs) =  */
+#psi4 {
+  width: 110px;
+}
+#area4 {
+  width: 99px;
+  margin-left: 5px;
+}
+#equals4 {
+  margin-left: 5px;
+}
+
+/* Torque (in lbs) =  */
+#hp5 {
+  width: 99px;
+}
+#rpm5 {
+  width: 99px;
+  margin: 0px 5px;
+}
+
+/* Cylinder area (in²) = */
+#dia6 {
+  width: 110px;
+}
+#equals6 {
+  margin: 5px;
+}
+
+/* EREA - Effected Rod End Area (in²) =  */
+#dia12 {
+  width: 110px;
+}
+#rod12 {
+  width: 110px;
+  margin-left: 5px;
+}
+#equals12 {
+  margin-left: 5px;
+}
+
+/* Cyl Time (seconds) = */
+#area7 {
+  width: 99px;
+}
+#stroke7 {
+  width: 99px;
+  margin-left: 5px;
+}
+#gpm7 {
+  width: 99px;
+  margin: 0px 5px;
+}
+
+/* Cyl HP = */
+#cylSpeed8 {
+  width: 145px;
+}
+#cylForce8 {
+  width: 125px;
+  margin-left: 5px;
+}
+#equals8 {
+  margin-left: 5px;
+}
+
+/* Cyl Adj. gpm on retract = */
+#cylArea9 {
+  width: 110px;
+}
+#gpm9 {
+  width: 99px;
+  margin-left: 5px;
+}
+#erea9 {
+  width: 99px;
+  margin: 0px 5px;
+}
+
+/* Cyl Speed (ft/min) = */
+#stroke10 {
+  width: 99px;
+}
+#time10 {
+  width: 125px;
+  margin: 0px 5px;
+}
+
+/* Cyl Speed (ft/min) = */
+#gpm11 {
+  width: 99px;
+}
+#area11{
+  width: 110px;
+  margin: 0px 5px;
+}
+/* Formula end */

@@ -347,9 +347,7 @@ function Formulas() {
                 <div className= "col-md-6">
                     <h6> 
                         Force (lbs) = <br /> <br />
-                        {/* style="width: 120px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Pressure (psi)" id="pressure1" onChange={getVariables} /> x  
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Area (in²)" id="area1" onChange={getVariables} />
                         <button className="equals" id="equals1" onClick={equals}>=</button>
                         <output type="number" id="forceResult"></output> 
@@ -358,11 +356,8 @@ function Formulas() {
 
                     <h6> 
                         Gpm = <br /> <br />
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="rpm" id="rpm2" onChange={getVariables}/> x
-                        {/* style="width: 150px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Displacement (in³)" id="displacement2" onChange={getVariables} /> / 231
-                        
                         <button className="equals" id="equals2" onClick={equals2}>=</button>
                         <output type="number" id="gpmresult"></output> 
                     </h6>
@@ -370,11 +365,8 @@ function Formulas() {
 
                     <h6> 
                         Hyd HP = <br /> <br />
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="gpm" id="gpm3" onChange={getVariables} /> x
-                        {/* style="width: 120px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Pressure (psi)" id="psi3" onChange={getVariables} /> / 1,714
-                        
                         <button className="equals3" id="equals3" onClick={equals3}>=</button>
                         <output type="number" id="hydHPResult"></output> 
                     </h6>
@@ -382,9 +374,7 @@ function Formulas() {
 
                     <h6>
                         Torque (in lbs) = <br /> <br />
-                        {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Pressure (psi)" id="psi4" onChange={getVariables} /> x
-                          {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Area (in³)" id="area4" onChange={getVariables} /> / 6.28
                         <button className="equals4" id="equals4" onClick={equals4}>=</button>
                         <output type="number" id="torqueResult4"></output> 
@@ -393,9 +383,7 @@ function Formulas() {
 
                     <h6>
                         Torque (in lbs) = <br /> <br />
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="HP" id="hp5" onChange={getVariables} /> x 63,025 /  
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="rpm" id="rpm5" onChange={getVariables} /> 
                         <button className="equals5" id="equals5" onClick={equals5}>=</button>
                         <output type="number" id="torqueResult5"></output> 
@@ -404,7 +392,6 @@ function Formulas() {
 
                     <h6>
                         Cylinder area (in²) = <br /> <br />
-                        {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Diameter (in)" id="dia6" onChange={getVariables} /> ² x .7854 
                         <button className="equals6" id="equals6" onClick={equals6}>=</button>
                         <output type="number" id="output6"></output> 
@@ -415,9 +402,7 @@ function Formulas() {
                 <div className="col-md-6">
                     <h6>
                         EREA - Effected Rod End Area (in²) = <br /> <br />
-                        {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder=" Cyl. Dia. (in)" id="dia12" onChange={getVariables} /> ² x .7854 - 
-                        {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder=" Rod Dia. (in)" id="rod12" onChange={getVariables} /> ² x.7854 
                         <button className="equals12" id="equals12" onClick={equals12}>=</button>
                         <output type="number" id="output12"></output> 
@@ -426,11 +411,8 @@ function Formulas() {
               
                     <h6>
                         Cyl Time (seconds) =<br /> <br />
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Area (in²)" id="area7" onChange={getVariables} /> x 
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Stroke (in)" id="stroke7" onChange={getVariables} /> x .26 / 
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="gpm" id="gpm7" onChange={getVariables} /> 
                         <button className="equals7" id="equals7" onClick={equals7}>=</button>
                         <output type="number" id="output7"></output> 
@@ -439,9 +421,7 @@ function Formulas() {
 
                     <h6>
                         Cyl HP =<br /> <br />
-                        {/* style="width: 145px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Cyl. Speed (ft/min)" id="cylSpeed8" onChange={getVariables} /> x 
-                        {/* style="width: 125px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Cyl. Force (lbs.)" id="cylForce8" onChange={getVariables} /> / 33,000 
                         <button className="equals8" id="equals8" onClick={equals8}>=</button>
                         <output type="number" id="output8"></output> 
@@ -450,11 +430,8 @@ function Formulas() {
 
                     <h6>
                         Cyl Adj. gpm on retract =<br /> <br />
-                        {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Cyl. Area (in²)" id="cylArea9" onChange={getVariables} /> x 
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="gpm" id="gpm9" onChange={getVariables} /> / 
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="EREA (in²)" id="erea9" onChange={getVariables} /> 
                         <button className="equals9" id="equals9" onClick={equals9}>=</button>
                         <output type="number" id="output9"></output> 
@@ -463,9 +440,7 @@ function Formulas() {
 
                     <h6>
                         Cyl Speed (ft/min) =<br /> <br />
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Stroke (in)" id="stroke10" onChange={getVariables} /> x 5 /
-                        {/* style="width: 125px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Time (seconds)" id="time10" onChange={getVariables} /> 
                         <button className="equals10" id="equals10" onClick={equals10}>=</button>
                         <output type="number" id="output10"></output> 
