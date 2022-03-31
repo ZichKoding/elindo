@@ -4,9 +4,23 @@ import ProductNav from "../components/ProductNav";
 
 function Products() {
 
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/piston-pumps.png';
-    console.log(metaImage);
+    let metaDesc = document.getElementById('meta-desc').content;
+    metaDesc = 'Find all of our industrial product supply.';
+
+    let metaKeywords = document.getElementById('meta-keywords').content;
+    metaKeywords = 'pumps, valves, motors, cylinder, filters,';
+
+    let metaOgTitle = document.getElementById('meta-og-title').content;
+    metaOgTitle = 'Technical Union | Hydraulic Piston Pumps';
+
+    let metaOgDesc = document.getElementById('meta-og-desc').content;
+    metaOgDesc = 'Hydraulic Piston Pumps';
+
+    let metaOgImage = document.getElementById('meta-og-image').content;
+    metaOgImage = '/Images/oppictures/piston-pumps.png';
+
+    let metaOgUrl = document.getElementById('meta-og-url').content;
+    metaOgUrl = 'http://www.tu.biz/Products'
 
     return (
         <>

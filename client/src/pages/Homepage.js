@@ -2,7 +2,7 @@ import React from "react";
 
 function Homepage() {
 
-    let metaImage = document.getElementById('meta-image').content;
+    let metaImage = document.getElementById('meta-og-image').content;
     console.log(metaImage);
 
     return (
