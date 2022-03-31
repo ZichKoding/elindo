@@ -42,7 +42,7 @@ function App() {
           {/* Homepage */}
           <Route path="/" element={<Homepage />} />
 
-          {/* All Product Pages from lines 44-53 */}
+          {/* All Product Pages */}
           <Route path="/Products" element={<Products />} />
             <Route path="/Products/VanePumps" element={<VanePumps />} />
             <Route path="/Products/GearPumps" element={<GearPumps />} />

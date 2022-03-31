@@ -3,6 +3,9 @@ import HydraulicMotorForm from "../components/HydraulicMotorForm"
 import ProductNav from "../components/ProductNav";
 
 function GerolerMotors() {
+    let metaImage = document.getElementById('meta-image').content;
+    metaImage = '/Images/oppictures/geroler-motors.png';
+    console.log(metaImage);
 
     return (
         <>
@@ -15,7 +18,7 @@ function GerolerMotors() {
                     <table className= "table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th colspan="5" className="product-title-table-text">Geroler Motors </th>
+                                <th colSpan="5" className="product-title-table-text">Geroler Motors </th>
                             </tr>
         
                             <tr className="inside-table-text">

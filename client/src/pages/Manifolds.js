@@ -2,6 +2,10 @@ import React from "react";
 import ProductNav from "../components/ProductNav";
 
 function Manifolds() {
+    let metaImage = document.getElementById('meta-image').content;
+    metaImage = '/Images/oppictures/manifolds.png';
+    console.log(metaImage);
+
     return (
         <>
             <div className="row">
@@ -20,7 +24,7 @@ function Manifolds() {
                     <table className="table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th colspan="4" className="product-title-table-text"> Hydraulic Manifolds </th>
+                                <th colSpan="4" className="product-title-table-text"> Hydraulic Manifolds </th>
                             </tr>
             
                             <tr className="inside-table-text">

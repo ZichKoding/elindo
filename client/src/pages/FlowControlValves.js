@@ -2,6 +2,10 @@ import React from "react";
 import ProductNav from "../components/ProductNav";
 
 function FlowControlValves() {
+    let metaImage = document.getElementById('meta-image').content;
+    metaImage = '/Images/oppictures/flow-control-valves.png';
+    console.log(metaImage);
+
     return (
         <>
             <div className="row">
@@ -13,12 +17,12 @@ function FlowControlValves() {
                     <table className= "table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th colspan="5" className="product-title-table-text"> Flow Control Valves </th>
+                                <th colSpan="5" className="product-title-table-text"> Flow Control Valves </th>
                             </tr>
                 
                             <tr className="inside-table-text">
                                 <td>Type</td>
-                                <td colspan="2">Connection</td>
+                                <td colSpan="2">Connection</td>
                                 <td>Rated GPM</td>
                             </tr>
                         </thead>

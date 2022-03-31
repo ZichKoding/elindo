@@ -3,6 +3,11 @@ import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function VanePumps() {
+  let metaImage = document.getElementById('meta-image').content;
+  metaImage = '/Images/oppictures/vane-pumps.png';
+  console.log(metaImage);
+
+
     return (
       <>
         <div className="row">
@@ -15,7 +20,7 @@ function VanePumps() {
               <table className="table table-hover table-striped table-bordered">
                 <thead>
                   <tr>
-                    <th colspan="3" className="product-title-table-text">Vane Pumps</th>
+                    <th colSpan="3" className="product-title-table-text">Vane Pumps</th>
                   </tr>
 
                   <tr className="inside-table-text">
@@ -77,7 +82,7 @@ function VanePumps() {
               <table className="table table-hover table-striped table-bordered">
                 <thead>
                   <tr>
-                    <th colspan="2" className="product-title-table-text">Single Vane Pumps</th>
+                    <th colSpan="2" className="product-title-table-text">Single Vane Pumps</th>
                   </tr>
 
                   <tr className="inside-table-text">
@@ -147,7 +152,7 @@ function VanePumps() {
               <table className= "table table-hover table-striped table-bordered">
                 <thead>
                   <tr>
-                    <th colspan="3" className="product-title-table-text">Double Vane Pumps</th>
+                    <th colSpan="3" className="product-title-table-text">Double Vane Pumps</th>
                   </tr>
 
                   <tr className="inside-table-text">
@@ -160,7 +165,7 @@ function VanePumps() {
                 <tbody>
                   <tr className="inside-table-text">
                   
-                    <td rowspan="3">
+                    <td rowSpan="3">
                       2520V (VQ)<br />
                       3520V (VQ) <br />
                       3525V (VQ)<br />
@@ -220,7 +225,7 @@ function VanePumps() {
               <table className= "table table-hover table-striped table-bordered">
                 <thead>
                   <tr>
-                    <th colspan="4" className="product-title-table-text"> Triple Vane Pumps</th>
+                    <th colSpan="4" className="product-title-table-text"> Triple Vane Pumps</th>
                   </tr>
                   <tr className="inside-table-text">
                     <td>Series </td>
@@ -231,7 +236,7 @@ function VanePumps() {
                 </thead>
                 <tbody>
                   <tr className="inside-table-text">
-                    <td rowspan="3">
+                    <td rowSpan="3">
                       2520V (VQ)<br />
                       3520V (VQ)<br />
                       3525V (VQ)<br />
@@ -258,7 +263,7 @@ function VanePumps() {
                       14 GPM  <br />
                     </td>
 
-                    <td rowspan="3"> 
+                    <td rowSpan="3"> 
                       <strong> V10</strong><br />
                       1 GPM <br />
                       2 GPM  <br />
@@ -318,7 +323,7 @@ function VanePumps() {
               <table className= "table table-hover table-striped table-bordered ">
                 <thead>
                   <tr>
-                    <th colspan="7" className="product-title-table-text"> Variable Displacement Vane Pumps</th>
+                    <th colSpan="7" className="product-title-table-text"> Variable Displacement Vane Pumps</th>
                   </tr>
 
                   <tr className="inside-table-text">

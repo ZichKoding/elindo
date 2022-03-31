@@ -2,43 +2,47 @@ import React from "react";
 import ProductNav from "../components/ProductNav";
 
 function DirectionalControlValves() {
+    let metaImage = document.getElementById('meta-image').content;
+    metaImage = '/Images/oppictures/directional-control-valves.png';
+    console.log(metaImage);
+
     return (
         <>
-            <div class="row">
-                <div class="col-md-9">
-                    <h6 class="product-title-text"> Directional Control Valves</h6> <br /> 
-                    <img src={require("../assets/images/directional-control-valves.png")} class="product-pic" alt="directional-control-valves" /> <br />
-                    <a href={require("../assets/pdf files/directional-control-valves.pdf")} class="btn btn-info">Download PDF</a> <br /> <br />
+            <div className="row">
+                <div className="col-md-9">
+                    <h6 className="product-title-text"> Directional Control Valves</h6> <br /> 
+                    <img src={require("../assets/images/directional-control-valves.png")} className="product-pic" alt="directional-control-valves" /> <br />
+                    <a href={require("../assets/pdf files/directional-control-valves.pdf")} className="btn btn-info">Download PDF</a> <br /> <br />
                         
-                    <table class="table table-hover table-striped table-bordered">
+                    <table className="table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th colspan="4" class="product-title-table-text"> Directional Control Valves </th>
+                                <th colSpan="4" className="product-title-table-text"> Directional Control Valves </th>
                             </tr>
                 
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>Size</td>
-                                <td colspan="2">Pressure (psi)</td>
+                                <td colSpan="2">Pressure (psi)</td>
                                 <td> GPM </td>
                             </tr>
                         </thead>            
 
                         <tbody>
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td></td>
                                 <td><strong>P-A-B</strong></td>
                                 <td><strong>Tank</strong></td>
                                 <td></td>
                             </tr>
 
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>NG6 / D03</td>
                                 <td>4,567</td>
                                 <td>2,300</td>
                                 <td>21</td>
                             </tr>
 
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>NG10 / D05</td>
                                 <td>4,567</td>
                                 <td>2,300</td>

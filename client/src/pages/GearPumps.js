@@ -3,6 +3,10 @@ import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function GearPumps() {
+    let metaImage = document.getElementById('meta-image').content;
+    metaImage = '/Images/oppictures/gear-pumps.png';
+    console.log(metaImage);
+
     return (
         <>
             <div className="row">
@@ -16,7 +20,7 @@ function GearPumps() {
                         <table className= "table table-hover table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th colspan="5" className="gear-pump-table-title">Gear Pump Range</th>
+                                    <th colSpan="5" className="gear-pump-table-title">Gear Pump Range</th>
                                 </tr>
 
                                 <tr className="inside-table-text">
@@ -62,7 +66,7 @@ function GearPumps() {
                                 </tr>
 
                                 <tr>
-                                    <td colspan= "5"> * RPM / PSI may vary depending on pump size range </td>
+                                    <td colSpan= "5"> * RPM / PSI may vary depending on pump size range </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -77,13 +81,13 @@ function GearPumps() {
                         <table className= "table table-hover table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th colspan="5" className="gear-pump-table-title"> Dump Pump Range</th>
+                                    <th colSpan="5" className="gear-pump-table-title"> Dump Pump Range</th>
                                 </tr>
 
                                 <tr className="inside-table-text">
                                     <td>Model</td>
                                     <td>Max. psi</td>
-                                    <td colspan="2" >GPM at 1,800 RPM</td>
+                                    <td colSpan="2" >GPM at 1,800 RPM</td>
                                     <td>Max. rpm</td>
                                 </tr>
                             </thead>
@@ -92,7 +96,7 @@ function GearPumps() {
                                 <tr>
                                     <td></td>
                                     <td></td>
-                                    <td colspan="2" className="inside-table-text">Size</td>
+                                    <td colSpan="2" className="inside-table-text">Size</td>
                                     <td></td>
                                 </tr>
 
