@@ -449,9 +449,7 @@ function Formulas() {
 
                     <h6>
                         Cyl Speed (ft/min) =<br /> <br />
-                        {/* style="width: 99px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="gpm" id="gpm11" onChange={getVariables} /> x 19.25 / 
-                        {/* style="width: 110px" ADD CSS TO ELEMENT BELOW */}
                         <input type="number" placeholder="Cyl. Area (in²)" id="area11" onChange={getVariables} /> 
                         <button className="equals11" id="equals11" onClick={equals11}>=</button>
                         <output type="number" id="output11"></output> 
