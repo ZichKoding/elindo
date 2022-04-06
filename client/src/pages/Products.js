@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function Products() {
+
+    let metaDesc = document.getElementById('meta-desc').content;
+    metaDesc = 'Find all of our industrial product supply.';
+
+    let metaKeywords = document.getElementById('meta-keywords').content;
+    metaKeywords = 'pumps, valves, motors, cylinder, filters,';
+
+    let metaOgTitle = document.getElementById('meta-og-title').content;
+    metaOgTitle = 'Technical Union | Hydraulic Piston Pumps';
+
+    let metaOgDesc = document.getElementById('meta-og-desc').content;
+    metaOgDesc = 'Hydraulic Piston Pumps';
+
+    let metaOgImage = document.getElementById('meta-og-image').content;
+    metaOgImage = '/Images/oppictures/piston-pumps.png';
+
+    let metaOgUrl = document.getElementById('meta-og-url').content;
+    metaOgUrl = 'http://www.tu.biz/Products'
+
     return (
         <>
             <div className="row">
@@ -17,7 +36,7 @@ function Products() {
                             
                             <thead>
                                 <tr>
-                                    <th colspan="4" className="a10-table-title">A10V series Pumps</th>
+                                    <th colSpan="4" className="a10-table-title">A10V series Pumps</th>
                                 </tr>
                                 <tr className="inside-table-text">
                                     <td>Displacement</td>
@@ -82,7 +101,7 @@ function Products() {
                         <table className= "table table-hover table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th colspan="14" className="a10-table-title">High Pressure Pumps</th>
+                                    <th colSpan="14" className="a10-table-title">High Pressure Pumps</th>
                                 </tr>
                             
 
@@ -106,7 +125,7 @@ function Products() {
                             
                             <tbody>
                                 <tr className="inside-table-text">
-                                    <td colspan="14" className="pressure-piston-pump-rpm">GPM at 1,800 RPM</td>
+                                    <td colSpan="14" className="pressure-piston-pump-rpm">GPM at 1,800 RPM</td>
                                 
                                 </tr>
                                 <tr className="inside-table-text">
@@ -142,7 +161,7 @@ function Products() {
                                     <td>0.67*</td>
                                 </tr>
                                 <tr >
-                                    <td colspan="14" className="pressure-piston-pump-rpm">GPM at 1,800 RPM</td>
+                                    <td colSpan="14" className="pressure-piston-pump-rpm">GPM at 1,800 RPM</td>
                                 </tr>
                                 <tr className="inside-table-text">
                                     <td>L80</td>
@@ -193,7 +212,7 @@ function Products() {
                                     <td>1.65*</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="14" className="pressure-piston-pump-rpm">GPM at 1,200 RPM</td>
+                                    <td colSpan="14" className="pressure-piston-pump-rpm">GPM at 1,200 RPM</td>
                                 </tr>
                                 <tr className="inside-table-text">
                                     <td>C4</td>
@@ -244,7 +263,7 @@ function Products() {
                                     <td>8.50*</td>
                                 </tr>
                                 <tr >
-                                    <td colspan="14" >* intermittent</td>
+                                    <td colSpan="14" >* intermittent</td>
                                 </tr> 
                             </tbody>
                         </table>

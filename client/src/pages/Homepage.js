@@ -1,6 +1,10 @@
 import React from "react";
 
 function Homepage() {
+
+    let metaImage = document.getElementById('meta-og-image').content;
+    console.log(metaImage);
+
     return (
         <div className="row">
             <div className="col-md-6">

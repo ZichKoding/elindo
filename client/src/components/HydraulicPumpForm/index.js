@@ -48,22 +48,22 @@ function HydraulicPumpForm() {
                 <form 
                     action ="https://formsubmit.co/info@tu.biz"
                     method="post"
-                    enctype="multipart/form-data"
+                    encType="multipart/form-data"
                 >
                     <h5> 
                         * Select one checkbox
                     </h5>
 
                     {/* <input type="radio" name="pumpselect" id= pump1 value="singlePump" onclick = "singlePumpf()" checked /> */}
-                    <input type="radio" name="pumpselect" id="pump1" value="singlePump" onClick={singlePumpf} />
-                    <label for="pump1"> Single Pump</label>
+                    <input type="radio" name="pumpselect" id="pump1" value="singlePump" onClick={singlePumpf} defaultChecked />
+                    <label htmlFor="pump1"> Single Pump</label>
                     <br />
     
                     <input type="radio" name="pumpselect" id="pump2" value="doublePump" onClick={doublePumpf} />
-                    <label for="pump2"> Double Pump</label><br />
+                    <label htmlFor="pump2"> Double Pump</label><br />
                     
                     <input type="radio" name="pumpselect" id="pump3" value="Triplepump" onClick={triplePumpf} />
-                    <label for="pump3"> Triple Pump</label><br /><br />
+                    <label htmlFor="pump3"> Triple Pump</label><br /><br />
                     
                     
                     {/* <fieldset id= mainfiledsetpumps> */}
@@ -75,36 +75,36 @@ function HydraulicPumpForm() {
                                 </u></h5>
                             </legend>
         
-                            <label className="pump-labels form-label-style" for="gpmPump1">* GPM (single pump): </label>
-                            <input type="number" id="gpmPump1"  name="gpmPump1" placeholder = "GPM required" required /><br />
+                            <label className="pump-labels form-label-style" htmlFor="gpmPump1">* GPM (single pump): </label>
+                            <input type="number" id="gpmPump1" className="input-fields" name="gpmPump1" placeholder = "GPM required" required /><br />
                             
-                            <label className="pump-labels form-label-style" for="pressure"> * Pressure (psi):</label>
-                            <input type="number" id="pressure" name="pressure" placeholder = "Max Cont. pressure" required /> <br />
+                            <label className="pump-labels form-label-style" htmlFor="pressure"> * Pressure (psi):</label>
+                            <input type="number" id="pressure" className="input-fields" name="pressure" placeholder = "Max Cont. pressure" required /> <br />
                             
-                            <label className="pump-labels" for="rpm">* RPM: </label>
+                            <label className="pump-labels" htmlFor="rpm">* RPM: </label>
                             <input type="number" id="rpm" name="rpm" placeholder = "Max Cont. RPM" required /><br /> <br />
                     
                             
                             <h5>
                                 Single pump / First pump details.
                             </h5>
-                            <input type="radio" name="p1type" value="p1fixed" id="p1fixedselect" checked />
-                            <label for="p1fixed"> Fixed displacement / No Control</label> <br />
+                            <input type="radio" name="p1type" value="p1fixed" id="p1fixedselect" defaultChecked />
+                            <label htmlFor="p1fixed"> Fixed displacement / No Control</label> <br />
                             
                             <input type="radio" name="p1type" value="p1pressurecomp" />
-                            <label for="p1pressurecomp"> Variable displacement / Pressure Compensated </label> <br />
+                            <label htmlFor="p1pressurecomp"> Variable displacement / Pressure Compensated </label> <br />
                             
                             <input type="radio" name="p1type" value="p1loadsensing" />
-                            <label for="p1loadsensing"> Varaible siplacement / Load Sensing</label><br />
+                            <label htmlFor="p1loadsensing"> Varaible siplacement / Load Sensing</label><br />
                             
                             <input type="radio" name="p1type" value="p1pressurecompwithremote" />
-                            <label for="p1pressurecompwithremote"> Variable displacement / Pressure Compensated with Remote Control </label> <br />
+                            <label htmlFor="p1pressurecompwithremote"> Variable displacement / Pressure Compensated with Remote Control </label> <br />
                             
                             <input type="radio" name="p1type" value="p1hplimiter" />
-                            <label for="p1hplimiter"> Varialbe displacement /HP Limiter </label><br /> 
+                            <label htmlFor="p1hplimiter"> Varialbe displacement /HP Limiter </label><br /> 
                             
                             <input type="radio" name="p1type" value="p1other" />
-                            <label for="p1other"> Other (please comment in notes below) </label><br /> <br />
+                            <label htmlFor="p1other"> Other (please comment in notes below) </label><br /> <br />
                                 
                         </fieldset>
 
@@ -117,34 +117,34 @@ function HydraulicPumpForm() {
                                 </u> </h5> 
                             </legend>
 
-                            <label className="pump-labels" for="gpmPump2" >* GPM (second stage): </label>
-                            <input type="number" id="gpmPump2" name="gpmPump2" placeholder = "GPM required" required /><br />
+                            <label className="pump-labels" htmlFor="gpmPump2" >* GPM (second stage): </label>
+                            <input type="number" id="gpmPump2" className="input-fields" name="gpmPump2" placeholder = "GPM required" required /><br />
                             
-                            <label className="pump-labels" for="pressure2" > * Pressure (psi):</label>
-                            <input type="number" id="pressure2" name="pressure2" placeholder = "Max Cont. pressure 2" required /> <br /> 
+                            <label className="pump-labels" htmlFor="pressure2" > * Pressure (psi):</label>
+                            <input type="number" id="pressure2" className="input-fields" name="pressure2" placeholder = "Max Cont. pressure 2" required /> <br /> 
                             
                             
                             <h5>
                                 Second stage pump details:
                             </h5>
                             
-                            <input type="radio" name="p2type" value="p2fixed" checked />
-                            <label for="p2fixed"> Fixed displacement / No Controls</label> <br />
+                            <input type="radio" name="p2type" value="p2fixed" defaultChecked />
+                            <label htmlFor="p2fixed"> Fixed displacement / No Controls</label> <br />
 
                             <input type="radio" name="p2type" value="p2pressurecomp" />
-                            <label for="p2pressurecomp"> Variable displacement / Pressure Compensated </label> <br />
+                            <label htmlFor="p2pressurecomp"> Variable displacement / Pressure Compensated </label> <br />
                             
                             <input type="radio" name="p2type" value="p2loadsensing" />
-                            <label for="p2loadsensing"> Variable displacement / Load Sensing</label><br />
+                            <label htmlFor="p2loadsensing"> Variable displacement / Load Sensing</label><br />
                             
                             <input type="radio" name="p2type" value="p2pressurecompwithremote" />
-                            <label for="p2pressurecompwithremote"> Variable displacement / Pressure Compensated with Remote Control </label> <br /> 
+                            <label htmlFor="p2pressurecompwithremote"> Variable displacement / Pressure Compensated with Remote Control </label> <br /> 
                             
                             <input type="radio" name="p2type" value="p2hplimiter" />
-                            <label for="p2hplimiter"> Variable displacement / HP Limiter </label><br /> 
+                            <label htmlFor="p2hplimiter"> Variable displacement / HP Limiter </label><br /> 
                             
                             <input type="radio" name="p2type" value="p2other" />
-                            <label for="p2other"> Other (please comment in notes below) </label><br /> <br />
+                            <label htmlFor="p2other"> Other (please comment in notes below) </label><br /> <br />
                                 
                         </fieldset>
                                 
@@ -157,55 +157,55 @@ function HydraulicPumpForm() {
                                 </u> </h5> 
                             </legend> 
         
-                            <label className="pump-labels" for="gpmPump3" >* GPM (third stage): </label>
-                            <input type="number" id="gpmPump3" name="gpmPump3" placeholder = "GPM required" required /><br />
+                            <label className="pump-labels" htmlFor="gpmPump3" >* GPM (third stage): </label>
+                            <input type="number" id="gpmPump3" className="input-fields" name="gpmPump3" placeholder = "GPM required" required /><br />
                             
-                            <label className="pump-labels" for="pressure3" > * Pressure (psi):</label>
-                            <input type="number" id="pressure3" name="pressure3" placeholder = "Max Cont. pressure 3" required /> <br />
+                            <label className="pump-labels" htmlFor="pressure3" > * Pressure (psi):</label>
+                            <input type="number" id="pressure3" className="input-fields" name="pressure3" placeholder = "Max Cont. pressure 3" required /> <br />
         
                             <h5>
                                 Third stage pump details:
                             </h5> 
 
-                            <input type="radio" name="p3type" value="p3fixed" checked />
-                            <label for="p3type"> Fixed displacement / No Control. </label> <br />
+                            <input type="radio" name="p3type" value="p3fixed" defaultChecked />
+                            <label htmlFor="p3type"> Fixed displacement / No Control. </label> <br />
                             
                             
                             <input type="radio" name="p3type" value="p3pressurecomp" />
-                            <label for="p3pressurecomp"> Variable displacement / Pressure Compensated </label> <br />
+                            <label htmlFor="p3pressurecomp"> Variable displacement / Pressure Compensated </label> <br />
                             
                             <input type="radio" name="p3type" value="p3loadsensing" />
-                            <label for="p3loadsensing"> Variable displacement / Load Sensing</label><br />
+                            <label htmlFor="p3loadsensing"> Variable displacement / Load Sensing</label><br />
                             
                             <input type="radio" name="p3type" value="p3pressurecompwithremote" />
-                            <label for="p3pressurecompwithremote"> Variable displacement / Pressure Compensated with Remote Control </label> <br />
+                            <label htmlFor="p3pressurecompwithremote"> Variable displacement / Pressure Compensated with Remote Control </label> <br />
                             
                             <input type="radio" name="p3type" value="p3hplimiter" />
-                            <label for="p3hplimiter"> Variable displacement / HP Limiter </label><br /> 
+                            <label htmlFor="p3hplimiter"> Variable displacement / HP Limiter </label><br /> 
                             
                             <input type="radio" name="p3type" value="p3other" />
-                            <label for="p3other"> Other (please comment in notes below) </label><br /> <br /> <br />
+                            <label htmlFor="p3other"> Other (please comment in notes below) </label><br /> <br /> <br />
                                     
                         </fieldset> 
 
 
 
         
-                        <label className="pump-labels-final" for="firstname" >* First Name: </label> 
-                        <input type="text" id="firstname" name="firstname" placeholder = " First Name" required /> <br />
+                        <label className="pump-labels-final" htmlFor="firstname" >* First Name: </label> 
+                        <input type="text" id="firstname" className="input-fields" name="firstname" placeholder = " First Name" required /> <br />
                         
-                        <label className="pump-labels-final" for="lastname">* Last Name: </label>
-                        <input type="text" id="lastname" name="firstname" placeholder = "Last Name" required /> <br />
+                        <label className="pump-labels-final" htmlFor="lastname">* Last Name: </label>
+                        <input type="text" id="lastname" className="input-fields" name="firstname" placeholder = "Last Name" required /> <br />
                         
-                        <label  className="pump-labels-final"for="company" > Company: </label>
-                        <input type="text" id="company" name="company" placeholder = "Your company" /> <br />
+                        <label  className="pump-labels-final"htmlFor="company" >* Company: </label>
+                        <input type="text" id="company" className="input-fields" name="company" placeholder = "Your company" /> <br />
                         
-                        <label className="pump-labels-final" for="email"> * E-mail: </label>
-                        <input type="email" id="email" name="email" placeholder = "Your E-mail" required /> <br />
+                        <label className="pump-labels-final" htmlFor="email"> * E-mail: </label>
+                        <input type="email" id="email" className="input-fields" name="email" placeholder = "Your E-mail" required /> <br />
                         
-                        <label className="form-display-block" for="notes"> Notes: </label>
+                        <label className="form-display-block" htmlFor="notes"> Notes: </label>
                             
-                        <textarea className="form-textarea" type="text" id="notes" name="notes" placeholder = "Include any additional information"> </textarea> <br />
+                        <textarea className="form-textarea" type="text" id="notes" name="notes" placeholder="Include any additional information" /> <br />
                         
                         <input className="form-display-none" type="text" name="_honey" />
                         <br /><br />

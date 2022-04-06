@@ -641,3 +641,11 @@
   margin: 0px 5px;
 }
 /* Formula end */
+
+/* Product Forms start */
+.input-fields {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Product Forms end */

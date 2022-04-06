@@ -3,21 +3,25 @@ import HydraulicFlowMeterForm from "../components/HydraulicFlowMeterForm";
 import ProductNav from "../components/ProductNav";
 
 function FlowMeters() {
+    let metaImage = document.getElementById('meta-image').content;
+    metaImage = '/Images/oppictures/flowmeters.png';
+    console.log(metaImage);
+
     return (
         <>
-            <div class="row">
-                <div class=" col-md-9">
-                    <h6 class="product-title-text"> Flowmeters</h6> <br /> 
-                    <img src ={require("../assets/images/flowmeter.png")} class= "product-pic" alt="flowmeter" />  <br />
-                    <a href={require("../assets/pdf files/Simple-Flowmeter-Datasheet.pdf")} class="btn btn-info">Download PDF</a> <br /> <br />
+            <div className="row">
+                <div className=" col-md-9">
+                    <h6 className="product-title-text"> Flowmeters</h6> <br /> 
+                    <img src ={require("../assets/images/flowmeter.png")} className= "product-pic" alt="flowmeter" />  <br />
+                    <a href={require("../assets/pdf files/Simple-Flowmeter-Datasheet.pdf")} className="btn btn-info">Download PDF</a> <br /> <br />
                         
-                    <table class= "table table-hover table-striped table-bordered">
+                    <table className= "table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th colspan="4" class="product-title-table-text">Flowmeters </th>
+                                <th colSpan="4" className="product-title-table-text">Flowmeters </th>
                             </tr>
             
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>Size</td>
                                 <td>PSI</td>
                                 <td>Ports<br /> SAE / NPT</td>
@@ -26,21 +30,21 @@ function FlowMeters() {
                         </thead>
 
                         <tbody>
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>1</td>
                                 <td>3,500 (aluminum or brass) <br /> 6,000 (Stainless Steel)</td>
                                 <td>#6, #8, #10 <br /> 1/4", 3/8", 1/2"</td>
                                 <td> 1-5 <br /> 1-10 <br /> 1-15</td>
                             </tr>
 
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>2</td>
                                 <td>3,500 (aluminum or brass) <br /> 6,000 (Stainless Steel)</td>
                                 <td>#12, #16<br /> 3/4", 1"</td>
                                 <td> 1-10 <br /> 3-15 <br /> 7.5-20 <br /> 5-30</td>
                             </tr>
 
-                            <tr class="inside-table-text">
+                            <tr className="inside-table-text">
                                 <td>3</td>
                                 <td>3,500 (aluminum or brass) <br /> 6,000 (Stainless Steel)</td>
                                 <td>#20, #24, #32 <br /> 1-1/4", 1-1/2", 2"</td>
