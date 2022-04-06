@@ -4,9 +4,9 @@ import ProductNav from "../components/ProductNav";
 
 
 function VaneMotors() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/vane-motors.png';
-    console.log(metaImage);
+    // let metaImage = document.getElementById('meta-image').content;
+    // metaImage = '/Images/oppictures/vane-motors.png';
+    // console.log(metaImage);
 
     return (
         <>

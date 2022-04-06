@@ -2,9 +2,9 @@ import React from "react";
 import ProductNav from "../components/ProductNav";
 
 function DirectionalControlValves() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/directional-control-valves.png';
-    console.log(metaImage);
+    // let metaImage = document.getElementById('meta-image').content;
+    // metaImage = '/Images/oppictures/directional-control-valves.png';
+    // console.log(metaImage);
 
     return (
         <>

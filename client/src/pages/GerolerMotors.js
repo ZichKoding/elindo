@@ -3,9 +3,9 @@ import HydraulicMotorForm from "../components/HydraulicMotorForm"
 import ProductNav from "../components/ProductNav";
 
 function GerolerMotors() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/geroler-motors.png';
-    console.log(metaImage);
+    // let metaImage = document.getElementById('meta-image').content;
+    // metaImage = '/Images/oppictures/geroler-motors.png';
+    // console.log(metaImage);
 
     return (
         <>

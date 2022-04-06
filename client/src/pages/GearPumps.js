@@ -1,14 +1,25 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function GearPumps() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/gear-pumps.png';
-    console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Gear Pumps </title>
+
+                <meta name="description" content=" Find our gear pump catalog " />
+                <meta name="keywords" content="gear pumps " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Gear Pumps" />
+                <meta property="og:description" content="Find Hydraulic gear pumps from Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/gear-pumps.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/GearPumps" />
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-9">
                     <div className="col-md-12">

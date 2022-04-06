@@ -2,9 +2,9 @@ import React from "react";
 import ProductNav from "../components/ProductNav";
 
 function FlowControlValves() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/flow-control-valves.png';
-    console.log(metaImage);
+    // let metaImage = document.getElementById('meta-image').content;
+    // metaImage = '/Images/oppictures/flow-control-valves.png';
+    // console.log(metaImage);
 
     return (
         <>

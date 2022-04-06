@@ -2,9 +2,9 @@ import React from "react";
 import ProductNav from "../components/ProductNav";
 
 function Manifolds() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/manifolds.png';
-    console.log(metaImage);
+    // let metaImage = document.getElementById('meta-image').content;
+    // metaImage = '/Images/oppictures/manifolds.png';
+    // console.log(metaImage);
 
     return (
         <>

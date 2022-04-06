@@ -33,7 +33,6 @@ function Inventory() {
         console.log(savedParts);
 
         // // get pages
-        // pages = Math.ceil(partsList.length/25);
 
         for(let i = 1; i <= pages; i++) {
             activepages.push(i);

@@ -1,29 +1,44 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function Products() {
 
-    let metaDesc = document.getElementById('meta-desc').content;
-    metaDesc = 'Find all of our industrial product supply.';
+    // let metaDesc = document.getElementById('meta-desc').content;
+    // metaDesc = 'Find all of our industrial product supply.';
 
-    let metaKeywords = document.getElementById('meta-keywords').content;
-    metaKeywords = 'pumps, valves, motors, cylinder, filters,';
+    // let metaKeywords = document.getElementById('meta-keywords').content;
+    // metaKeywords = 'pumps, valves, motors, cylinder, filters,';
 
-    let metaOgTitle = document.getElementById('meta-og-title').content;
-    metaOgTitle = 'Technical Union | Hydraulic Piston Pumps';
+    // let metaOgTitle = document.getElementById('meta-og-title').content;
+    // metaOgTitle = 'Technical Union | Hydraulic Piston Pumps';
 
-    let metaOgDesc = document.getElementById('meta-og-desc').content;
-    metaOgDesc = 'Hydraulic Piston Pumps';
+    // let metaOgDesc = document.getElementById('meta-og-desc').content;
+    // metaOgDesc = 'Hydraulic Piston Pumps';
 
-    let metaOgImage = document.getElementById('meta-og-image').content;
-    metaOgImage = '/Images/oppictures/piston-pumps.png';
+    // let metaOgImage = document.getElementById('meta-og-image').content;
+    // metaOgImage = '/Images/oppictures/piston-pumps.png';
 
-    let metaOgUrl = document.getElementById('meta-og-url').content;
-    metaOgUrl = 'http://www.tu.biz/Products'
+    // let metaOgUrl = document.getElementById('meta-og-url').content;
+    // metaOgUrl = 'http://www.tu.biz/Products'
 
     return (
         <>
+            <Helmet>
+                <title>TU - Technical Union | Products </title>
+
+                <meta name="description" content=" Find all of our industrial product supply. " />
+                <meta name="keywords" content="pumps, valves, motors, cylinder, filters,  " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Hydraulic Piston Pumps" />
+                <meta property="og:description" content="Hydraulic Piston Pumps" />
+                <meta property="og:image" content="./Images/oppictures/piston-pumps.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products" />
+            </Helmet>
+
             <div className="row">
                 <div className=" col-md-9">
                     <div className="col-md-12">

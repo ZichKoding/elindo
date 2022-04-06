@@ -1,15 +1,28 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import HydraulicPumpForm from "../components/HydraulicPumpForm";
 import ProductNav from "../components/ProductNav";
 
 function VanePumps() {
-  let metaImage = document.getElementById('meta-image').content;
-  metaImage = '/Images/oppictures/vane-pumps.png';
-  console.log(metaImage);
 
 
     return (
       <>
+        <Helmet>
+          <title>TU - Technical Union | Hydraulic Vane Pumps </title>
+
+          <meta name="description" content=" Find our hydraulic vane pump catalog " />
+          <meta name="keywords" content="vane, pumps " />
+          <meta name="author" content="Edgar Lindo" />
+
+          <meta property="og:title" content=" Technical Union" />
+          <meta property="og:description" content=" Hydraulic vane pumps from Technical Union" />
+          <meta property="og:image" content="./Images/oppictures/vane-pumps.png" />
+          <meta property="og:url" content="http://www.tu.biz/Products/VanePumps" />
+
+        </Helmet>
+
         <div className="row">
           <div className=" col-md-9 table-responsive">
             <div className="col-md-12">

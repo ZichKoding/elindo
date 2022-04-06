@@ -3,9 +3,9 @@ import HydraulicFlowMeterForm from "../components/HydraulicFlowMeterForm";
 import ProductNav from "../components/ProductNav";
 
 function FlowMeters() {
-    let metaImage = document.getElementById('meta-image').content;
-    metaImage = '/Images/oppictures/flowmeters.png';
-    console.log(metaImage);
+    // let metaImage = document.getElementById('meta-image').content;
+    // metaImage = '/Images/oppictures/flowmeters.png';
+    // console.log(metaImage);
 
     return (
         <>
