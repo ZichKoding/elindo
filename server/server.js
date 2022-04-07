@@ -29,3 +29,4 @@ app.get('*', (req, res) => {
 db.once('open', () => {
   app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
 });
+
