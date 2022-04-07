@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Pagination from "react-bootstrap/Pagination"
+import Pagination from "react-bootstrap/Pagination";
+import { Helmet } from "react-helmet";
 
 
 function Inventory() {
@@ -210,6 +211,17 @@ function Inventory() {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="  " />
+                <meta name="keywords" content=" " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" TU - Technical Union | Inventory" />
+                <meta property="og:description" content=" from  TU -Technical Union" />
+                <meta property="og:image" content="" />
+                <meta property="og:url" content="" />
+            </Helmet>
+
             <div className="col-md-12">
                 {/* style="margin-top: 50px; margin-bottom: 20px" ADD CSS TO ELEMENT BELOW */}
                 <p className="invy-text">

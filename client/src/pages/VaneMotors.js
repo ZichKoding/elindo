@@ -1,15 +1,25 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import HydraulicMotorForm from "../components/HydraulicMotorForm";
 import ProductNav from "../components/ProductNav";
 
 
 function VaneMotors() {
-    // let metaImage = document.getElementById('meta-image').content;
-    // metaImage = '/Images/oppictures/vane-motors.png';
-    // console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title>TU - Technical Union | Hydraulic Vane Motors </title>
+
+                <meta name="description" content=" Find our hydraulic vane motor catalog " />
+                <meta name="keywords" content="hydraulic, vane, motors " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Vane Motors" />
+                <meta property="og:description" content="Find hydraulic vane motors from Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/vane-motors.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/VaneMotors" />
+            </Helmet>
             <div className="row">
                 <div className=" col-md-9">
                     <h6 className="product-title-text"> Vane Motors</h6> <br /> 

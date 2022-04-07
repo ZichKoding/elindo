@@ -1,13 +1,23 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ProductNav from "../components/ProductNav";
 
 function DirectionalControlValves() {
-    // let metaImage = document.getElementById('meta-image').content;
-    // metaImage = '/Images/oppictures/directional-control-valves.png';
-    // console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Hydraulic Directional Control Valves </title>
+
+                <meta name="description" content=" Find our catalog for directional control valves for hydraulics " />
+                <meta name="keywords" content=" directional control valves" />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Directional Control Valves" />
+                <meta property="og:description" content="Find Directional Control Valves from TU Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/directional-control-valves.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/DirectionalControlValves" />
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-9">
                     <h6 className="product-title-text"> Directional Control Valves</h6> <br /> 

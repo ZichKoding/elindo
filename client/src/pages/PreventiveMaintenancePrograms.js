@@ -1,9 +1,24 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ServicesNav from "../components/ServicesNav";
 
 function PMPrograms() {
     return (
         <>
+            <Helmet>
+                <title> Technical Union | Preventive Maintenance Programs</title>
+
+                <meta name="description" content=" It is important to keep the hydraulic oil clean, cool, and dry. Check out our preventive maintenance programs.  " />
+                <meta name="keywords" content=" preventive, maintenance, industrial machine maintenance " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Preventive Maintenance Programs" />
+                <meta property="og:description" content="Contact TU Technical Union | Services" />
+                <meta property="og:image" content="./Images/oppictures/maintenance-programs.png" />
+                <meta property="og:url" content="http://www.tu.biz/Services/PreventiveMaintenancePrograms" />
+
+            </Helmet>
+
             <div class="row">
                 <div class="col-md-9">
                     <p class= "preventive-maintenance-text">

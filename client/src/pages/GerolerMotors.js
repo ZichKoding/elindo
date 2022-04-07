@@ -1,14 +1,24 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import HydraulicMotorForm from "../components/HydraulicMotorForm"
 import ProductNav from "../components/ProductNav";
 
 function GerolerMotors() {
-    // let metaImage = document.getElementById('meta-image').content;
-    // metaImage = '/Images/oppictures/geroler-motors.png';
-    // console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Geroler Hydraulic Motors </title>
+
+                <meta name="description" content=" Find our geroler hydraulic motor catalog" />
+                <meta name="keywords" content=" geroloer motorsS" />
+                <meta name="author" content="Edgar Lindo" />
+                
+                <meta property="og:title" content=" Technical Union | Hydraulic Geroler Motors" />
+                <meta property="og:description" content=" Hydraulic geroler motors from Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/geroler-motors.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/GerolerMotors" />
+            </Helmet>
             <div className="row">
                 <div className=" col-md-9">
                     <h6 className="product-title-text"> Geroler Motors</h6> <br /> 

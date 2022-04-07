@@ -1,13 +1,24 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ProductNav from "../components/ProductNav";
 
 function FlowControlValves() {
-    // let metaImage = document.getElementById('meta-image').content;
-    // metaImage = '/Images/oppictures/flow-control-valves.png';
-    // console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Flow Control Valves | Needle Valves </title>
+
+                <meta name="description" content=" Catalog for Flow control valves and needle valves. " />
+                <meta name="keywords" content=" flow control valves, needle valves " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Flow Control Valves" />
+                <meta property="og:description" content="Find Flow Control Valves from TU Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/flow-control-valves.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/FlowControlValves" />
+
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-9">
                     <h6 className="product-title-text"> Needle Valves </h6> <br /> 

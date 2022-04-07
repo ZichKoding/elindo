@@ -1,5 +1,6 @@
 import React from "react";
 import gsap from "gsap";
+import { Helmet } from "react-helmet";
  
 function Interactive() {
     let animation;
@@ -165,6 +166,35 @@ function Interactive() {
 
     return (
         <>
+            <Helmet>
+                <title>TU- Technical Union | Interactive hydraulic animation</title>
+
+                <meta
+                name="description"
+                content="Interactive animation of a simple hydraulic circuit."
+                />
+                <meta
+                name="keywords"
+                content="hydraulic, circuit, interactive, animation"
+                />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta
+                property="og:title"
+                content=" Technical Union Interactive hydraulic circuits"
+                />
+                <meta
+                property="og:description"
+                content="Simple hydraulic circuit animation"
+                />
+                <meta
+                property="og:image"
+                content="./Images/oppictures/interactive.png"
+                />
+                <meta property="og:url" content="http://www.tu.biz/Interactive" />
+
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-6">
                     {/* style="enable-background: new 0 0 1218 1048" ADD CSS TO SVG ELEMENT BELOW */}

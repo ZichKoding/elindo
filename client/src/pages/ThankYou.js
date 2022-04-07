@@ -1,9 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 function Thanks() {
     return (
         <>
+            <Helmet>
+                <title> TU- Technical Union | Thank you</title>
+                
+                <meta name="description" content="Thank you page" />
+                <meta name="keywords" content="thank you" />
+                <meta name="author" content="Edgar Lindo" />
+            </Helmet>
+
             <div class="row">
                 <div class="col-md-12">
                     <h6 class="thank-you-text"> Thank you! </h6>

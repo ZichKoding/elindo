@@ -1,13 +1,26 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ProductNav from "../components/ProductNav";
 
 function Manifolds() {
-    // let metaImage = document.getElementById('meta-image').content;
-    // metaImage = '/Images/oppictures/manifolds.png';
-    // console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Hydraulic Manifolds </title>
+
+                <meta name="description" content=" Find our hydraulic manifold catalog " />
+                <meta name="keywords" content="hydraulic, manifolds,  " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta name="facebook-domain-verification" content="fzctnjbrtlybvytmamk8glkng9af7p" />
+
+                <meta property="og:title" content=" Technical Union | Hydraulic Manifolds" />
+                <meta property="og:description" content="Find Hydraulic Manifolds from Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/manifolds.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/Manifolds" />
+
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-9">
                     <h6 className="product-title-text"> Hydraulic Manifolds </h6> <br /> 

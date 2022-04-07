@@ -1,9 +1,25 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import ServicesNav from "../components/ServicesNav";
 
 function Services() {
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Services </title>
+
+                <meta name="description" content=" Technical Union services includes oil analysis, preventive maintenance programs, purchasing department, etc.  " />
+                <meta name="keywords" content=" industrial services, purchasing, oil, analysis" />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Tribology Services" />
+                <meta property="og:description" content="We provide tribology fluid analysis." />
+                <meta property="og:image" content="./Images/oppictures/tribology.png" />
+                <meta property="og:url" content="http://www.tu.biz/Services" />
+
+            </Helmet>
+
             <div className="row"> 
                 <div className= "col-md-9">
                     <div className="row">

@@ -1,14 +1,25 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import HydraulicFlowMeterForm from "../components/HydraulicFlowMeterForm";
 import ProductNav from "../components/ProductNav";
 
 function FlowMeters() {
-    // let metaImage = document.getElementById('meta-image').content;
-    // metaImage = '/Images/oppictures/flowmeters.png';
-    // console.log(metaImage);
-
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Flowmeters </title>
+
+                <meta name="description" content=" Find our catalog for flowmeters " />
+                <meta name="keywords" content=" flowmeters , hydraulic" />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union | Flowmeters" />
+                <meta property="og:description" content="Find flowmeters from Technical Union" />
+                <meta property="og:image" content="./Images/oppictures/flowmeters.png" />
+                <meta property="og:url" content="http://www.tu.biz/Products/FlowMeters" />
+            </Helmet>
+
             <div className="row">
                 <div className=" col-md-9">
                     <h6 className="product-title-text"> Flowmeters</h6> <br /> 

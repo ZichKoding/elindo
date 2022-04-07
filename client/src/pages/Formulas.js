@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 
 function Formulas() {
@@ -335,6 +336,20 @@ function Formulas() {
 
     return (
         <>
+            <Helmet>
+                <title> TU - Technical Union | Fluid Power Formulas | Calculator </title>
+    
+                <meta name="description" content="Fluid Power calculator | PSI, Force, GPM, Speed, etc.. " />
+                <meta name="keywords" content="Fluid Power, Formulas, Calculator" />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Fluid Power Formulas Calculator" />
+                <meta property="og:description" content="Interactive Fluid Power Formulas" />
+                <meta property="og:image" content="./Images/oppictures/formulas.png" />
+                <meta property="og:url" content="http://www.tu.biz/Formulas" />
+
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-12">
                     <div className= "formulas-title">

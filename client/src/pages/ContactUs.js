@@ -1,9 +1,21 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 function ContactUs() {
     return (
         <>
+            <Helmet>
+                <meta name="description" content=" Feel free to contact Technical Union " />
+                <meta name="keywords" content=" Contact, page " />
+                <meta name="author" content="Edgar Lindo" />
+
+                <meta property="og:title" content=" Technical Union" />
+                <meta property="og:description" content="Contact TU Technical Union" />
+                <meta property="og:image" content="http://www.tu.biz/Images/oppictures/Tubiz contact.png" />
+                <meta property="og:url" content="http://www.tu.biz/ContactUs" />
+            </Helmet>
+
             <div className="row">
                 <div className="col-md-12">
                     <p className="contactus">
